@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--- 
+	Application: CF_Activedit
+	Name: table.cfm
+	Function: Insert a HTML table into activedit control 
+	Author: Pete Freitag
+	Company: CFDEV.COM
+	Version: 4
+	Revisions:
+		[none]
+	Date: 4/13/00
+ --->
+
+<html>
+<head>
+	<title>Insert Table</title>
+<script>
+	
+	function conjunction() {  //whats your function?
+	  var arr = new Array();
+	  rows = tablefrm.rows.value;
+	  cols = tablefrm.cols.value;
+	  attrs = "border=" + tablefrm.border.value + " bordercolor=" + tablefrm.bordercolor.value + " bgcolor=" + tablefrm.bgcolor.value + " cellpadding=2 cellspacing=0 style='" + tablefrm.color.value + "'";	 
+	  window.opener.insertTable(rows,cols,attrs);
+	  self.close();
+	}
+	function updateStyle() {
+		tbl.setAttribute("border",tablefrm.border.value);
+		tbl.style.borderColor = tablefrm.bordercolor.value; 
+		tbl.style.backgroundColor =  tablefrm.bgcolor.value;
+		tbl.style.color = tablefrm.color.value;
+	}	
+</script>
+
+<style type="text/css">
+	TD.Styled   {font-family:Tahoma,verdana,arial; font-size:8pt; background:white;}
+	A {
+		color : 1d039e;
+		text-decoration : none;
+		font-family:Verdana,arial; 
+		font-size:10pt;
+	}
+	A:Hover {
+		text-decoration : underline;
+		font-family:Verdana,arial; 
+		font-size:10pt;
+	}
+
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" onload="updateStyle()">
+<center><div style="font:bold 10pt Verdana,Arial;background-color:#f5f5f5;padding:4px;margin-bottom:5px;border-bottom:1px solid silver;" id="oTitle">Insert Table</div>
+<table cellpadding="1" cellspacing="3" border="0">
+<tr><form name="tablefrm">
+	<td class="styled">
+		<span style="font-size:10pt">Rows:</span>
+	</td>
+	<td>
+		<input type="text" name="rows" size="4" value="3">
+	</td>
+	<td rowspan="6">
+		<table cellpadding="2" cellspacing="0" width="220" height="100%" id="tbl">
+			<tr>
+				<td align="center">
+						<span style="font:10pt Verdana;">Table Style Preview</span>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr><tr>
+	<td class="styled">
+		<span style="font-size:10pt">Columns:</span>
+	</td>
+	<td>
+		<input type="text" name="cols" size="4" value="3">
+	</td>
+</tr><tr>
+	<td class="styled">
+		<span style="font-size:10pt">Border:</span>
+	</td>
+	<td>
+		<select name="border" style="width:100;font-weight:bold;font-family:Tohama" onchange="updateStyle()">
+			<option value="0">0
+			<option value="1" selected>1
+			<option value="2">2
+			<option value="3">3
+			<option value="4">4
+			<option value="5">5
+		</select>
+	</td>
+</tr>
+<tr>
+	<td class="styled">
+		<span style="font-size:10pt">Border Color:</span>
+	</td>
+	<td>
+		<select name="bordercolor" style="width:100;font-weight:bold;font-family:Tohama" onchange="updateStyle()">
+			<option value="black" selected style="color:black;">Black</option>
+			<option value="silver" style="color:silver">Silver
+			<option value="navy" style="color:navy">Navy
+			<option value="maroon" style="color:maroon">Maroon
+			<option value="red" style="color:red">Red
+			<option value="blue" style="color:blue">Blue
+			<option value="gray" style="color:gray">Gray
+			<option value="006600" style="color:006600">Green
+			<option value="white" style="color:black;">White</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td class="styled">
+		<span style="font-size:10pt">Background Color:</span>
+	</td>
+	<td>
+		<select name="bgcolor" style="width:100;font-weight:bold;font-family:Tohama" onchange="updateStyle()">
+			<option value="" selected style="color:black;">Transparent</option>
+			<option value="white" selected style="color:black;">White</option>
+			<option value="black" style="color:black;">Black</option>
+			<option value="silver" style="color:silver">Silver
+			<option value="navy" style="color:navy">Navy
+			<option value="maroon" style="color:maroon">Maroon
+			<option value="red" style="color:red">Red
+			<option value="blue" style="color:blue">Blue
+			<option value="gray" style="color:gray">Gray
+			<option value="green" style="color:green">Green
+		</select>
+	</td>
+</tr>
+<tr>
+	<td class="styled">
+		<span style="font-size:10pt">Text Color:</span>
+	</td>
+	<td>
+		<select name="color" style="width:100;font-weight:bold;font-family:Tohama" onchange="updateStyle()">
+			<option value="black" selected style="color:black;">Black</option>
+			<option value="silver" style="color:silver">Silver
+			<option value="navy" style="color:navy">Navy
+			<option value="maroon" style="color:maroon">Maroon
+			<option value="red" style="color:red">Red
+			<option value="blue" style="color:blue">Blue
+			<option value="gray" style="color:gray">Gray
+			<option value="green" style="color:green">Green
+			<option value="white" style="color:black;">White</option>
+		</select>
+	</td>
+</tr>
+</form>
+</table>
+
+<div align="center" style="background-color:#f5f5f5;padding:4px;margin-bottom:5px;border-top:1px solid silver;">
+			<a href="javascript:conjunction()"><img src="images/down.gif" border="0" align="absmiddle"></a>&nbsp;<A href="javascript:conjunction()"><b>Insert Table</b></a>
+			<!--- <input type="button" value="OK" onClick="conjunction(this.form)"> --->
+			&nbsp;&nbsp;&nbsp;
+			<a href="javascript:window.close()"><img src="images/delete.gif" border="0" align="absmiddle"></a>&nbsp;<A href="javascript:window.close()"><b>Cancel</b></a>
+		</div>
+
+</body>
+</html>

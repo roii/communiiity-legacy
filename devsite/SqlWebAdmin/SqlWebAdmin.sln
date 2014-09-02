@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\SqlWebAdmin\SqlWebAdmin\", "..\SqlWebAdmin", "{5EA0E334-EFF4-4EC8-B89B-3A8F6E5B6884}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		Debug.AspNetCompiler.VirtualPath = "/SqlWebAdmin"
+		Debug.AspNetCompiler.PhysicalPath = "..\SqlWebAdmin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SqlWebAdmin\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SqlWebAdmin"
+		Release.AspNetCompiler.PhysicalPath = "..\SqlWebAdmin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SqlWebAdmin\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1281"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EA0E334-EFF4-4EC8-B89B-3A8F6E5B6884}.Debug|.NET.ActiveCfg = Debug|.NET
+		{5EA0E334-EFF4-4EC8-B89B-3A8F6E5B6884}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

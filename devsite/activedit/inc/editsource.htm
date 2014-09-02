@@ -1,0 +1,66 @@
+<!--- 
+	Application: CF_Activedit
+	Name: editsource.cfm
+	Function: Container to edit the source of the document
+	Authors: Pete Freitag, Matt Finn
+	Company: CFDEV.COM
+	Version: 4
+	Revisions:
+		fix cancel button not cencelling
+	Date: 9/19/99
+ --->
+<html>
+<head>
+	<title>Edit Source</title>
+</head>
+
+<SCRIPT>
+
+window.onload=fnInit;
+function fnInit(){
+	ae_source_form.source.value = window.opener.DHTMLSafe.DOM.body.innerHTML;
+}
+function sendhome(obj) {
+	if (ae_source_form.source.value.length) {
+		window.opener.DHTMLSafe.DOM.body.innerHTML=ae_source_form.source.value;
+	}
+	else {
+		window.opener.DHTMLSafe.DOM.body.innerHTML=" ";
+		
+	}
+	window.close();
+}
+function cancel() {
+	window.close();
+}
+
+</SCRIPT>
+<style type="text/css">
+	A {
+		color : 1d039e;
+		text-decoration : none;
+	}
+	A:Hover {
+		text-decoration : underline;
+	}
+</style>
+
+<body bgcolor="white" topmargin="0" leftmargin="0">
+<font face="arial" size="2">
+<form name="ae_source_form">
+<textarea cols="58" rows="27" name="source"> </textarea><br>
+	<center>
+		<font face="Verdana" size="2">
+			<a href="javascript:sendhome()"><img src="images/save.gif" border="0" align="absmiddle"></a>&nbsp;<a href="javascript:sendhome()"><b>Save Changes</b></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="javascript:cancel()"><img src="images/delete.gif" border="0" align="absmiddle"></a>&nbsp;<a href="javascript:cancel()"><b>Cancel</b></a>
+			
+		</font>
+	</center>
+</form>
+
+</font>
+
+
+</body>
+</html>

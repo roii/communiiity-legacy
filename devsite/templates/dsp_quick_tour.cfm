@@ -1,0 +1,1 @@
+<cfoutput><img src="#request.imageroot#/quicktour_placeholder.gif" width="217" height="239" alt="" border="0"></cfoutput>

@@ -1,0 +1,227 @@
+A:link	
+{
+	COLOR: Black;
+	TEXT-DECORATION: underline;
+}
+
+
+A:visited	
+{
+	COLOR: Black;
+	TEXT-DECORATION: underline;
+
+}
+
+A:hover
+{
+    COLOR: Black;
+	TEXT-DECORATION: none;
+}		
+
+.section_header 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size:16pt; 
+	font-weight:bold; 
+	color:Black; 
+	line-height:130%;
+}
+
+.page_header 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size:13pt; 
+	font-weight:bold; 
+	color:Black; 
+	line-height:130%;
+}
+
+.page_introduction
+{
+	font-size: 12px;
+	color: Black;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: NONE;
+	letter-spacing: .03 em;
+	line-height: 160%;
+}
+
+.normal
+{
+	font-size: 11px;
+	color: 0c0c0c;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: NONE;
+	line-height: 150%;
+}
+	
+td
+{
+	font-size: 11px;
+	color: 0c0c0c;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: NONE;
+	line-height: 150%;
+}
+
+.small
+{
+	font-size: 10px;
+	color: 0c0c0c;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: NONE;
+	line-height: 130%;
+}	
+	
+.menubar 
+{
+	font-size: 10px;
+	color: Gray;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: NONE;
+	line-height: 130%;
+	font-weight: bold;
+}
+
+.whatnew_green
+{
+	font-size: 11px;
+	color: 198F74;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: none;
+	line-height: 130%;
+}
+
+td.calendarfields
+{
+	background-color: #e2e2e2;
+	padding: 0px 0px;
+}
+
+td.calendarfieldson
+{
+	background-color: white;
+	font-color: white;
+	padding: 0px 0px;
+}	
+	
+td.nav
+{
+	background-color: #1B4486;
+	padding: 2px 0px;
+}
+
+td.navon
+{
+	background-color: silver;
+	padding: 2px 0px;
+}
+
+td.nav1on
+{
+	background-color: #198F74;
+	padding: 2px 0px;
+}
+
+tr.whatnew
+{
+	background-color: #e2e2e2;
+	padding: 2px 0px;
+}
+
+tr.whatnewon
+{
+	background-color: silver;
+	padding: 2px 0px;
+}	
+
+
+td.whatnew
+{
+	background-color: #e2e2e2;
+	padding: 2px 0px;
+}
+
+td.whatnewon
+{
+	background-color: silver;
+	padding: 2px 0px;
+}	
+		
+tr.searchresults
+{
+	padding: 1px 0px;
+}
+
+tr.searchresultson
+{
+	background-color: #f4f4f4;
+	padding: 1px 0px;
+}
+
+.whitefield
+{
+	FONT-SIZE: 10px;
+    COLOR: 0a0a0a;
+    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	FONT-WEIGHT: normal;		
+	background-color: white;
+	LINE-HEIGHT: 120%;
+	border: solid 1px Black;
+}
+
+
+
+.title_quarter
+{
+    FONT-SIZE: 18px;
+    COLOR: 0A2A6B;
+    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+    FONT-DECORATION: NONE;
+	LINE-HEIGHT: 170%;
+}
+
+.title_date
+{
+    FONT-SIZE: 16px;
+    COLOR: 0A2A6B;
+    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+    FONT-DECORATION: NONE;
+	LINE-HEIGHT: 170%;
+}
+
+.introduction
+{
+    FONT-SIZE: 10px;
+    COLOR: Black;
+    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+    FONT-DECORATION: NONE;
+	LINE-HEIGHT: 170%;
+}
+
+.guideline_type
+{
+	font-size: 11px;
+	color: Black;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: NONE;
+	line-height: 120%;
+}
+
+.guideline_title
+{
+	font-size: 24px;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-decoration: NONE;
+	line-height: 150%;
+}
+
+.field
+	{
+		FONT-SIZE: 9px;
+	    COLOR: 0a0a0a;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+		FONT-WEIGHT: normal;		
+		background-color: White;
+		border: solid 1px silver;
+	}

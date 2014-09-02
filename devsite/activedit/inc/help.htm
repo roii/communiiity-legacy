@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--- 
+	Application: CF_Activedit
+	Name: help.cfm
+	Function: Help File for Activedit
+	Author: Pete Freitag
+	Company: CFDEV.COM
+	Version: 4
+	Revisions:
+		[none]
+	Date: 9/19/99
+ --->
+<html>
+<head>
+	<title>ActivEdit: Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+</head>
+<style>
+TD { font-family: verdana; 
+	 font-size: xx-small;
+	 }
+</style>
+
+<!--- <CFHEADER Name="Expires" Value="#Now()#">  --->
+<body bgcolor="white">
+<table width="100%" cellspacing="0" cellpadding="1"><form>
+	<tr>
+		<td valign="top">
+			<img src="images/save.gif" width=23 height=22 alt="Save" border="0" name="save">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Save your current file into the database.  When you are done editing your
+			page click this button just like in a regular word processor.
+			<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/cut.gif" width=23 height=22 alt="Cut" border="0">
+		</td><td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Remove the selected object and puts it on the clipboard.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/copy.gif" width=23 height=22 alt="Copy" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Copy the selected object to the clipboard.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/paste.gif" width=23 height=22 alt="Paste" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Insert an object from the clipboard at the current position.
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/undo.gif" width=23 height=22 alt="Undo" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Undo the last operation.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/redo.gif" width=23 height=22 alt="Redo" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Redo the last operation.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/fgcolor.gif" width=23 height=22 alt="Font" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Changes the font properties of the selected text.  Changes the font, size, and color.  It is highly recommended that you use Arial, or Verdana.
+			Those fonts tend to look the best.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/bold.gif" width=23 height=22 alt="Bold" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Makes the selected text <b>bold</b>.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/italic.gif" width=23 height=22 alt="Italic" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Makes the selected text <i>italic</i><br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/under.gif" width=23 height=22 alt="Underline" border="0">	
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Makes the Selected Text <u>Underlined</u><br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/inindent.gif" width=23 height=22 alt="Indent" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Indents the current text. Makes objects shift right.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/deindent.gif" width=23 height=22 alt="De-Indent" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Reverse indent, makes objects shift left.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/left.gif" width=23 height=22 alt="Left Justify" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Left Justify the current object.  Aligns objects with the left part of the screen.
+			<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/center.gif" width=23 height=22 alt="Center" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Center Justify.  Aligns objects with the center of the screen.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/right.gif" width=23 height=22 alt="Right" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Right Justify the current object.  Aligns objects with the right part of the screen.
+			<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/bullist.gif" width=23 height=22 alt="Bullet" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Make a bulleted list.<br>
+				<li>This is a bulleted item.<br><br>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/instable.gif" width=23 height=22 alt="Table" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Inserts a Table into your document. You are given the following options.
+				<ul type="square">
+					<li><b>Rows:</b> The number of rows you want your table to have.
+					<li><b>Columns:</b> The number of columns you want your table to have.
+					<li><b>Border:</b> The thickness of the border on your table. 1 usually looks good.
+					<li><b>Border Color:</b> The color of the border on the table.  Black is a good looking choice.
+					<li><b>Background Color:</b> The background color in the table.
+				</ul>
+			Once your table is inserted into your document you can click on the table with your right mouse button for more options.
+				<ul type="square">
+					<li><b>Insert Row:</b> Inserts a row into the table.
+					<li><b>Delete Rows:</b> Deletes a row.
+					<li><b>Insert Column:</b> Inserts a column into the table.
+					<li><b>Delete Columns:</b> Deletes a column.
+					<li><b>Insert Cell:</b> Inserts a table cell into the table. (one box)
+					<li><b>Delete Cells:</b> Deletes a table cell. (one box)
+					<li><b>Merge Cells:</b> Transforms two cells into one.
+					<li><b>Split Cells:</b> Takes one cell and makes two.
+					<li><b>Edit Table: </b> Edit properties of the table</li>
+				</ul>
+			
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/image.gif" width=23 height=22 alt="Image" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Inserts a image into the document.
+				<ul type="square">
+					<li><b>Uploading Images:</b> Click the image button.  A window will popup, then select browse.  Find the image on your computer.  If it is on a floppy disk try the a: drive, if it is on your hard drive try the c: drive.  
+					Then Click The upload button.  Your System Administrator may have disabled this feature if you do not see the buttons.
+					<li><b>Inserting Images:</b> On the right side of the image window there is a list of files. Click one, and then click insert.
+				</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/link.gif" width=23 height=22 alt="Link" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Creates a Hypertext Link with the selected text or object.  To make a email link select "mailto:" from the protocol list, then type the email address. 
+		
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/find.gif" width=23 height=22 alt="Link" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Find a word in the document.
+		</td>
+	</tr>
+		<tr>
+		<td valign="top">
+			<img src="images/spell.gif" width=23 height=22 alt="Link" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Checks the spelling of the document.
+		</td>
+	</tr>
+		<tr>
+		<td valign="top">
+			<img src="images/specialchar.gif" width=23 height=22 alt="Link" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Inserts Special Characters
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/p.gif" width=23 height=22 alt="Link" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Show Details - shows hidden tags
+		</td>
+	</tr>
+		<tr>
+		<td valign="top">
+			<img src="images/subscript.gif" width=23 height=22 alt="Subscript" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Converts selected text to <sub>subscript</sub>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/superscript.gif" width=23 height=22 alt="Superscript" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Converts selected text to <sup>superscript</sup>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/strike.gif" width=23 height=22 alt="Strike" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			<strike>Strikes</strike> the selected text.
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/highlight.gif" width=23 height=22 alt="highlight" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Highlights the selected text.
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/removeformat.gif" width=23 height=22 alt="Remove Formatting" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Removes formatting on selected text.
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<img src="images/replace.gif" width=23 height=22 alt="Replace" border="0">
+		</td>
+		<td width="1" bgcolor="black"><img src="images/save.gif" width="1" height="1"></td>
+		<td valign="top">
+			Opens the find and replace window.
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3">  
+			<center>
+				<!---<input type="button" value="close" onClick="self.close()">--->
+			</center>
+		</td>
+	</tr></form>
+</table>
+
+
+</body>
+</html>

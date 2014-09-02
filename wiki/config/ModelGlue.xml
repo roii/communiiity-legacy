@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE modelglue SYSTEM "http://www.web-relevant.com/modelglue/modelglue.dtd"
+>
+
+<modelglue>
+
+	<controllers>
+		<controller name="myController" type="wiki.controller.Controller">
+			<message-listener message="OnRequestStart" function="OnRequestStart" />
+			<message-listener message="OnRequestEnd" function="OnRequestEnd" />
+			<message-listener message="CheckForPrintable" function="CheckForPrintable" />
+			<message-listener message="CommitPage" function="CommitPage" />
+			<message-listener message="DeletePage" function="DeletePage" />
+			<message-listener message="EditInstructions" function="EditInstructions" />
+			<message-listener message="GetPageRender" function="GetPageRender" />
+			<message-listener message="LogPageView" function="LogPageView" />
+			<message-listener message="MovePage" function="MovePage" />
+			<message-listener message="NeedDefaultPageAuthRoles" function="getDefaultPageAuthRoles" />
+			<message-listener message="NeedOrphanedPages" function="GetOrphanedPages" />
+			<message-listener message="NeedPageCredentials" function="getPageCredentials" />
+			<message-listener message="NeedRecentUpdates" function="GetRecentUpdates" />
+			<message-listener message="NeedWhatLinksHere" function="GetWhatLinksHere" />
+			<message-listener message="PageChildren" function="GetPageChildren" />
+			<message-listener message="PageDiff" function="GetPageDiff" />
+			<message-listener message="PageHistory" function="GetPageHistory" />
+			<message-listener message="PageIndex" function="GetPageIndex" />
+			<message-listener message="Search" function="Search" />
+			<message-listener message="UploadFile" function="UploadFile" />
+			<message-listener message="ValidatePageCredentials" function="ValidatePageCredentials" />
+			<message-listener message="ValidateUploadEnabled" function="ValidateUploadEnabled" />
+		</controller>
+		<controller name="UserController" type="wiki.controller.UserController"> 
+			<message-listener message="OnRequestStart" function="OnRequestStart" />
+			<message-listener message="ValidateLogin" function="DoValidateLogin" />
+			<message-listener message="Logout" function="DoLogout" />
+			<message-listener message="CheckIfLoggedIn" function="DoCheckIfLoggedIn" />
+			<message-listener message="SaveEventValues" function="DoSaveEventValues" />
+			<message-listener message="RestoreEventValues" function="DoRestoreEventValues" />
+			<message-listener message="NeedUserCredentials" function="getUserCredentials" />
+			<message-listener message="NeedUserConfig" function="GetUserConfig" />
+		</controller>
+	</controllers>
+  
+	<event-handlers>
+    
+    <!-- USER SECURITY -->
+	<event-handler name="Logout">
+		<broadcasts>
+			<message name="Logout" />
+		</broadcasts>
+		<results>
+			<result do="Main" append="true" />
+		</results>
+	</event-handler>
+	<event-handler name="LoginForm">
+		<broadcasts />
+		<views>
+			<include name="body" template="dsp.loginform.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="SubmitLoginForm">
+		<broadcasts>
+			<message name="ValidateLogin" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="invalid" do="LoginForm" />
+			<!-- a valid result will forward to the PostLoginEvent in the UserController -->
+		</results>
+	</event-handler>
+		
+    <!-- CANVAS WIKI DEFAULT -->
+	<event-handler name="CommitPage">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="CommitPage" />
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="CommitPageRender" />
+		</results>
+	</event-handler>
+	
+	<event-handler name="CommitPageRender" access="private">
+		<broadcasts>
+			<message name="CommitPage" />
+		</broadcasts>
+		<results>
+			<result name="success" do="Main" redirect="yes" append="path"/>
+			<result name="invalid" do="Edit" />
+		</results>
+	</event-handler>
+	
+	<event-handler name="Main">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="Main" />
+			</message>
+			<!-- check user vs. page security to see if we can even output this page  -->
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="VIEW" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="MainRender" />
+		</results>
+	</event-handler>
+
+	<event-handler name="MainRender" access="private">
+		<broadcasts>
+			<!-- get page credentials for EDIT mode to determine whether to display the Edit this Page link -->
+			<message name="PageChildren" />
+			<message name="GetPageRender" />
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<message name="ValidatePageCredentials" /><!-- need to "validate" to store the pageAuth for EDIT in the view state -->
+			<message name="LogPageView" />
+		</broadcasts>
+		<views>
+			<include name="subpagelist" template="dsp.subpagelist.cfm" />
+			<include name="body" template="dsp.body.cfm" />
+		</views>
+		<results>
+			<result name="nonhtml" do="NonHtmlLayout" />
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="InvalidRole">
+		<broadcasts />
+		<views>
+			<include name="body" template="dsp.invalidrole.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="UserInfo">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="UserInfo" />
+			</message>
+		</broadcasts>
+		<views>
+			<include name="body" template="dsp.userinfo.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="Edit">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="Main" />
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<!-- check user vs. page security to see if we can even output this page  -->
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="EditRender" />
+		</results>
+	</event-handler>
+
+	<event-handler name="EditRender" access="private">
+		<broadcasts>
+			<message name="EditInstructions" />
+			<message name="NeedDefaultPageAuthRoles" />
+		</broadcasts>
+		<views>
+			<include name="body" template="dsp.edit.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="MovePageForm">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="Main" />
+				<argument name="pageMode" value="MOVE" />
+			</message>
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="MOVE" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="MovePageFormRender" />
+		</results>
+	</event-handler>
+
+	<event-handler name="MovePageFormRender" access="private">
+		<broadcasts />
+		<views>
+			<include name="body" template="dsp.movepageform.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="MovePage">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="MovePage" />
+				<argument name="pageMode" value="MOVE" />
+			</message>
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="MOVE" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="MovePageRender" />
+		</results>
+	</event-handler>
+	
+	<event-handler name="MovePageRender" access="private">
+		<broadcasts>
+			<message name="MovePage" />
+		</broadcasts>
+		<results>
+			<result name="success" do="GenericMessage"/>
+			<result name="invalid" do="MovePageForm" />
+		</results>
+	</event-handler>
+	
+	<event-handler name="DeletePageForm">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="Main" />
+				<argument name="pageMode" value="DELETE" />
+			</message>
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="DELETE" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="DeletePageFormRender" />
+		</results>
+	</event-handler>
+
+	<event-handler name="DeletePageFormRender" access="private">
+		<broadcasts />
+		<views>
+			<include name="body" template="dsp.deletepageform.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="DeletePage">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="DeletePage" />
+				<argument name="pageMode" value="DELETE" />
+			</message>
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="DELETE" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="DeletePageRender" />
+		</results>
+	</event-handler>
+	
+	<event-handler name="DeletePageRender" access="private">
+		<broadcasts>
+			<message name="DeletePage" />
+		</broadcasts>
+		<results>
+			<result name="success" do="GenericMessage"/>
+			<result name="invalid" do="DeletePageForm" />
+		</results>
+	</event-handler>
+	
+	<!-- TODO: figure out page-level authZ requirements for this?? -->
+    <event-handler name="GoogleSitemap">
+        <broadcasts>
+ 			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="GoogleSitemap" />
+			</message>
+            <message name="PageIndex" />
+        </broadcasts>
+        <views>
+            <include name="body" template="dsp.googlesitemap.cfm" />
+        </views>
+        <results />
+    </event-handler>
+
+	<event-handler name="PageHistory">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="PageHistory" />
+			</message>
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="VIEW" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="PageHistoryRender" />
+		</results>
+	</event-handler>
+
+	<event-handler name="PageHistoryRender" access="private">
+		<broadcasts>
+			<message name="PageHistory" />
+			<!-- determine if user can edit this page; required for actual page display for edit/view versions -->
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views>
+			<include name="body" template="dsp.pagehistory.cfm" />
+		</views>
+		<results>
+			<!-- ignore the ValidatePageCredentials results for now -->
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="PageDiff">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="PageDiff" />
+			</message>
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="VIEW" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="PageDiffRender" />
+		</results>
+	</event-handler>
+
+	<event-handler name="PageDiffRender" access="private">
+		<broadcasts>
+			<message name="PageDiff" />
+		</broadcasts>
+		<views>
+			<include name="body" template="dsp.pagediff.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+    <event-handler name="Search">
+        <broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="Search" />
+			</message>
+            <message name="Search" />
+        </broadcasts>
+        <views>
+            <include name="body" template="dsp.search.cfm" />
+			<include name="body" template="dsp.generic.pagelist.cfm" append="true" />
+        </views>
+        <results>
+        	<result do="Layout" />
+        </results>
+    </event-handler>
+
+	<event-handler name="ShowAllPages">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="ShowAllPages" />
+			</message>
+			<message name="PageIndex" />
+		</broadcasts>
+		<results>
+			<result do="Layout"/>
+		</results>
+		<views>
+			<include name="body" template="dsp.pageindex.cfm" />
+		</views>
+	</event-handler>
+
+	<event-handler name="SpecialPages">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="SpecialPages" />
+			</message>
+		</broadcasts>
+        <views>
+            <include name="body" template="dsp.specialpages.cfm" />
+        </views>
+        <results>
+        	<result do="Layout" />
+        </results>
+	</event-handler>
+
+	<event-handler name="RecentUpdates">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="RecentUpdates" />
+			</message>
+			<message name="NeedRecentUpdates" />
+		</broadcasts>
+		<results>
+			<result do="GenericPageList"/>
+		</results>
+	</event-handler>
+
+	<event-handler name="WhatLinksHere">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="WhatLinksHere" />
+			</message>
+			<message name="NeedWhatLinksHere" />
+		</broadcasts>
+		<results>
+			<result do="GenericPageList"/>
+		</results>
+	</event-handler>
+
+	<event-handler name="OrphanedPages">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="OrphanedPages" />
+			</message>
+			<message name="NeedOrphanedPages" />
+		</broadcasts>
+		<results>
+			<result do="GenericPageList"/>
+		</results>
+	</event-handler>
+
+	<event-handler name="UploadForm">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="UploadForm" />
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<message name="ValidateUploadEnabled" />
+			<message name="NeedPageCredentials">
+				<argument name="pageMode" value="EDIT" />
+			</message>
+			<message name="NeedUserCredentials" />
+			<message name="ValidatePageCredentials" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="UploadDisabled" do="UploadDisabled" />
+			<result name="invalidRole" do="InvalidRole" />
+			<result name="validRole" do="UploadFormRender" />
+		</results>
+	</event-handler>
+
+	<event-handler name="UploadFormRender" access="private">
+		<broadcasts>
+		</broadcasts>
+		<views>
+			<include name="body" template="dsp.uploadform.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="UploadFormSubmit">
+		<broadcasts>
+			<message name="CheckIfLoggedIn">
+				<argument name="returnToEvent" value="UploadForm" />
+			</message>
+			<message name="ValidateUploadEnabled" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="UploadEnabled" do="UploadFile" />
+			<result name="UploadDisabled" do="UploadDisabled" />
+		</results>
+	</event-handler>
+
+	<event-handler name="UploadFile" access="private">
+		<broadcasts>
+			<message name="UploadFile" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="success" do="Main" redirect="yes" append="path"/>
+			<result name="invalid" do="UploadForm" />
+		</results>
+	</event-handler>
+
+	<event-handler name="GenericMessage">
+		<broadcasts />
+		<views>
+			<include name="body" template="dsp.generic.message.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+	<event-handler name="GenericPageList">
+		<broadcasts />
+		<views>
+			<include name="body" template="dsp.generic.pagelist.cfm" />
+		</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+
+
+
+	<!-- Misc Events -->	      	
+	<event-handler name="Layout" access="private">
+		<broadcasts>
+			<message name="CheckForPrintable" />
+		</broadcasts>
+		<views />
+		<results>
+			<result name="normal" do="LayoutNormal" />
+			<result name="printable" do="LayoutPrintable" />
+		</results>
+	</event-handler>
+    
+	<event-handler name="LayoutNormal" access="private">
+		<broadcasts />
+		<views>			
+			<include name="navigation" template="dsp.navigation.cfm" />
+			<include name="main" template="layout.main.cfm" />
+		</views>
+		<results />
+	</event-handler>
+    
+	<event-handler name="LayoutPrintable" access="private">
+		<broadcasts />
+		<views>			
+			<include name="main" template="layout.printable.cfm" />
+		</views>
+		<results />
+	</event-handler>
+    
+	<event-handler name="NonHtmlLayout" access="private">
+		<broadcasts />
+		<views>			
+			<include name="main" template="layout.nonhtml.cfm" />
+		</views>
+		<results />
+	</event-handler>
+    
+    <event-handler name="Exception" access="public">
+      <broadcasts />
+			<views>
+    		<include name="body" template="exception.cfm" />
+    	</views>
+		<results>
+			<!--
+			<result do="Layout" />
+			-->
+		</results>
+	</event-handler>
+
+    <event-handler name="UploadDisabled" access="private">
+      <broadcasts />
+			<views>
+    		<include name="body" template="exception.uploaddisabled.cfm" />
+    	</views>
+		<results>
+			<result do="Layout" />
+		</results>
+	</event-handler>
+  </event-handlers>
+</modelglue>

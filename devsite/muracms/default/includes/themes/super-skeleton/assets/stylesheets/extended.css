@@ -1,0 +1,543 @@
+/* @override 
+	http://localhost:8500/themes/super-skeleton/includes/themes/super-skeleton/assets/stylesheets/extended.css */
+
+/*Table styles missing from original theme!*/
+table {
+	border: 1px solid #ddd;
+}
+
+th, td {
+	padding: .25em;
+}
+
+th {
+	background-color: #f5f5f5;
+	color: #000;
+	border: 0;
+	line-height: 1.6;
+	font-weight: bold;
+	border: 1px solid #666 !important;
+	}
+	
+td {
+	/*border: 1px solid #666 !important;
+	background: #fff;*/
+	}
+	
+.dark table {
+	border: 1px solid #666;
+}
+
+.dark th {
+	background-color: #333;
+	color: #f0ece5;
+	}
+	
+.dark td {
+	border: 1px solid #cecccc;
+	background: #fff;
+	color: #000;
+	}
+
+h2.pageTitle{ 
+    background: url("../images/theme/backgrounds/pattern_diagonal_medium.png") repeat scroll 0 0 transparent;
+    font-size: 28px;
+    line-height: 49px;
+    margin-bottom: 20px;
+    padding: 8px 0;
+}
+
+h2.pageTitle span{  padding: 17px 22px 17px 0;  }
+
+.dark a, .dark a:hover, .dark a:visited, .dark a:active {
+    color: #73C9FF;
+}
+
+.content ol, .content ul {
+	margin: 1em 2em;
+}
+
+.content ul {
+	list-style: disc;
+}
+
+.content ol {
+	list-style-type: decimal;
+}
+
+/* Attempt to lose component "widget" template */
+/*.sidebar > * {
+	margin-bottom: 10px !important;
+	padding-bottom: 10px !important;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+}
+
+.sidebar > * > *:last-child {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.sidebar > * > * {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.sidebar > .widget:last-child {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}*/
+
+.widget form, .widget fieldset, .sidebar #regularInput  {
+	margin-bottom: 0;
+}
+
+.svIndex > ul.navSecondary li {
+	margin: 0  0 .5em;
+}
+
+/* @group Primary Nav */
+
+#navPrimary li a {
+	font-weight: bold;
+	/*min-height: 25px; Added if there's no subhead on each main nav item */
+}
+
+#navPrimary li a span {
+	font-weight: normal;
+}
+
+#navPrimary ul {
+	/*margin-top: -10px;*/
+}
+
+/* @end */
+
+/* @group Forms */
+
+form ol, form ul {
+	list-style: none;
+}
+
+form label {
+	float: none;
+	text-align: left;
+}
+
+form .req label {
+    background-position: top left !important;
+    padding-left: .75em;
+}
+
+form .buttons {
+	text-align: left;
+}
+
+input type[submit], input.submit {
+	float: none;
+}
+
+li .req {
+    background: none;
+    padding-right: 0;
+}
+
+li#rememberMe, li#subscribeComments {
+	float: left;
+	clear: none !important;
+	width: auto;
+	margin: 0 2em 0 0;
+	white-space: nowrap;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select { margin-bottom: 20px !important; }
+
+fieldset textarea {
+	width: 69%;
+}
+
+p.required {
+	float: right;
+}
+
+#postcomment fieldset {
+	margin-bottom: 0;
+}
+
+form .buttons {
+	width: 69%;
+	font-size: 11px;
+}
+
+/* @end */
+
+/* @group Portal Output */
+#svPortal {
+	margin-top: 0;
+	padding-top: 0;
+	border: 0;
+}
+
+#svPortal dl {
+	padding-bottom: 8px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.dark #svPortal dl {
+	border-bottom: 1px solid #666;
+}
+
+#svPortal dl.first {
+	margin-top: 0;
+}
+
+#svPortal dt {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 21px;
+	margin-bottom: 11px;
+}
+
+#svPortal dt.title {
+	margin-bottom: 5px;
+}
+/*#svPortal dt.title a {
+	color: #333333;
+}
+#svPortal dt.title a:hover {
+	color: #EE7727;
+}*/
+
+#svPortal .releaseDate {
+	font-size: 11px;
+	line-height: 1;
+	font-weight: normal;
+}
+#svPortal dd.image {
+	position: absolute;
+	padding-top: 10px;
+	padding-right: 9px;
+	margin-left: 10px;
+	border-right: 4px solid rgba(155, 155, 155, .2);
+	clear: both;
+}
+
+#svPortal dd.credits {
+	color: #aaa;
+}
+#svPortal dd.summary {
+	margin-bottom: 18px;
+	padding-top: 9px;
+	clear: left;
+}
+#svPortal .hasImage dd.summary {
+	padding-top: 0px;
+	clear: none;
+}
+
+.credits,.categories,.comments,.rating {
+	float: none;
+	margin-bottom: 16px;
+	padding: 0;
+	font-size: 11px;
+	line-height: 1;
+}
+
+
+#svLoginContainer {
+	margin: 0px;
+}
+
+#svLoginContainer label {
+	background: none;
+}
+label.checkbox {
+	display: inline;
+}
+#svLoginContainer label span {
+	padding-left: .2em;
+}
+/* @end */
+
+/* @group Comments */
+
+#svComments .indent-1,
+#svComments .indent-2,
+#svComments .indent-3,
+#svComments .indent-4,
+#svComments .indent-5,
+#svComments .indent-6,
+#svComments .indent-7,
+#svComments .indent-8,
+#svComments .indent-9 {
+	border-left: none;
+	padding-left: 0px;
+}
+
+#svComments .outer {
+	background-image: url("../images/comment-connector.png");
+}
+#svComments .inner {
+	background: url("../images/theme/backgrounds/noise-white.jpg") repeat scroll 0 0 transparent;
+	padding-bottom: 10px;
+	position: relative;
+}
+#svComments .last .inner {
+	padding-top: 10px;
+}
+#svComments dl {
+	background-color: #fff;
+	border: solid 1px #dfdfdf;
+	padding: 30px !important;
+	padding-top: 20px !important;
+	margin: 0px;
+	position: relative;
+}
+#svComments .level0 dl {
+	padding-top: 30px !important;
+}
+
+#svComments .indent-1 {
+	padding-left: 61px;
+}
+#svComments .indent-2 {
+	padding-left: 122px;
+}
+#svComments .indent-3 {
+	padding-left: 183px;
+}
+#svComments .indent-4,
+#svComments .indent-5,
+#svComments .indent-6,
+#svComments .indent-7,
+#svComments .indent-8,
+#svComments .indent-9 {
+	padding-left: 244px;
+}
+
+#svComments .indent-1 .inner:before,
+#svComments .indent-2 .inner:before,
+#svComments .indent-3 .inner:before,
+#svComments .indent-4 .inner:before,
+#svComments .indent-5 .inner:before,
+#svComments .indent-6 .inner:before,
+#svComments .indent-7 .inner:before,
+#svComments .indent-8 .inner:before,
+#svComments .indent-9 .inner:before {
+	content: '';
+	border-top: solid 1px #cacaca;
+	display: block;
+	position: absolute;
+	width: 20px;
+	top: 20px;
+	margin-left: -30px;
+}
+#svComments .indent-1.last .inner:before,
+#svComments .indent-2.last .inner:before,
+#svComments .indent-3.last .inner:before,
+#svComments .indent-4.last .inner:before,
+#svComments .indent-5.last .inner:before,
+#svComments .indent-6.last .inner:before,
+#svComments .indent-7.last .inner:before,
+#svComments .indent-8.last .inner:before,
+#svComments .indent-9.last .inner:before {
+	top: 30px !important;
+}
+
+#svComments dl dt,
+#svComments dl dd {
+	padding-left: 55px;
+}
+#svComments .level0 dl dt,
+#svComments .level0 dl dd {
+	padding-left: 0px;
+}
+#svComments dl dt cite {
+    color: #222222;
+    font-size: 16px;
+    font-weight: bold;
+}
+#svComments dl dd.gravatar {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	padding: 0px;
+	margin: 0px;
+}
+#svComments .level0 dl dd.gravatar {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	left: auto;
+}
+#svComments dl dd.dateTime {
+	color: #ee7727;
+	font-style: italic;
+	font-size: 12px;
+}
+
+#svComments dl dd.comment {
+	padding-bottom: 15px;
+}
+#svComments dl dd.comment p {
+	line-height: 21px;
+}
+
+#svComments .reply {
+	position: absolute;
+	left: -1px;
+	bottom: -1px;
+	margin: 0px;
+	border: solid 1px #dfdfdf;
+	background-color: #fafafa;
+
+
+    font-family: Tahoma;
+    font-size: 8px !important;
+	line-height: 18px;
+    padding: 0 8px 1px !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+/* @end */
+
+/* @group Rater */
+
+.stars a {
+	width: 14px;
+	height: 13px;
+	background: transparent url(../images/rater/stars.png) no-repeat;
+}
+
+.stars .zero { background-image: url(../images/rater/star_zero.png); }
+.stars .one { background-image: url(../images/rater/star_one.png); }
+.stars .onehalf { background-image: url(../images/rater/star_onehalf.png); }
+.stars .two { background-image: url(../images/rater/star_two.png); }
+.stars .twohalf { background-image: url(../images/rater/star_twohalf.png); }
+.stars .three { background-image: url(../images/rater/star_three.png); }
+.stars .threehalf { background-image: url(../images/rater/star_threehalf.png); }
+.stars .four { background-image: url(../images/rater/star_four.png); }
+.stars .fourhalf { background-image: url(../images/rater/star_fourhalf.png); }
+.stars .five { background-image: url(../images/rater/star_five.png); }
+
+.rater a:hover, .rater a.over {
+	opacity: 1;
+	background-position: 0 -30px;
+}
+
+/* @end */
+
+/* @group Draggable Feeds */
+h3.addFeeds {
+	font-size: 14px;
+}
+
+#svAddNewFeed{
+	color: #000;
+}
+
+#svAddNewFeed select, #svAddNewFeed input {
+	min-width: 0;
+	width: 200px;
+	color: #fff;
+	height: 22px;
+	font-size: 11px;
+}
+
+ul.dragableFeeds {
+	padding: .5em;
+}
+
+.dark .dragableBoxHeader span {
+	color: #000;
+}
+
+.dark .RSSbuttonClose, .dark .RSSbuttonEdit {
+	background-color: #333;
+}
+
+
+/* @end */
+
+/* @group Calendar - Color Overrides
+===================================== */
+
+.svCalendar th a, .svCalendar th a:hover {
+	background: #333;
+	color: #f0ece5;
+	text-decoration: none;
+	font-size: 16px;
+	}
+	
+.svCalendar tr.dayofweek td {
+	background: #666;
+	color: #fff;
+	border:1px solid #666;
+	border-top: 0;
+	}
+
+#svCalendarNav {
+	margin-bottom: 2em;
+}
+	
+table a {
+	color: #f0ece5;
+}
+
+.dark .svCalendar table {
+	border: 2px solid #666;
+}
+
+.dark .svCalendar th {
+	background-color: #333;
+	color: #f0ece5;
+	}
+
+.dark .svCalendar th a, .dark .svCalendar th a:hover {
+	background: #333;
+	color: #f0ece5;
+	}
+
+.dark .svCalendar tr.dayofweek td {
+	background: #666;
+	color: #fff;
+	border: 0;
+	border-bottom: 2px solid #666;
+	}
+
+.dark .svCalendar td {
+	border: 1px solid #cecccc;
+	background: #fff;
+	color: #000;
+	}
+
+#svCalendarNav {
+	margin-bottom: 2em;
+}
+	
+#svCalendarNav td a {
+	color: #f0ece5;
+}
+
+
+
+/* @end Calendar
+-------------------------------- */
+
+.twtr-widget {
+	background: transparent !important;
+}
+
+.twtr-doc {
+	background: transparent !important;
+}
+
+.twtr-widget hd {
+	background: transparent !important;
+}

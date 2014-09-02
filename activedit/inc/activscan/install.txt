@@ -1,0 +1,25 @@
+Installation guide
+Activescan Cold Fusion Custom Tag
+Copyright 1999 
+NETDesign Inc. http://www.netdesigninc.com
+All Rights Reserved
+
+-----------------------------------------------------------------------------------------
+
+1)	Copy activescan.cfm into your Cold Fusion Custom Tags Directory
+	Usually (c:\CFusion\CustomTags)
+
+2)	Copy the inc directory somewhere in your web server root.
+
+3)	Copy cf_activescan.vtm in your ColdFusion Studio Folder.
+	Usually (c:\Program Files\Allaire\ColdFusion Studio4\Extensions\TagDefs\Custom)
+
+4)	Cf_activescan is now ready to be used in your web applications. It must be declared
+	in your .cfm files with the necessary attributes specified for it to function
+	correctly.
+
+5)	Please view help.htm for further instructions on the usage of cf_activescan.
+
+-----------------------------------------------------------------------------------------
+
+Note: To setup the demo, you must set the variables in demo\application.cfm

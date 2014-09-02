@@ -1,0 +1,119 @@
+/*
+      Created by CSS Portal Layout Generator
+	  
+	  http://www.cssportal.com
+	  	  
+*/
+@import url(http://fonts.googleapis.com/css?family=Delius|Architects+Daughter|Terminal+Dosis+Light);
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+
+p {
+	padding-top: 0px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width: 100%;
+}
+
+#content { 
+ float: left;
+ color: #333;
+ background: #FFFFFF;
+ height: 350px;
+ width: 100%;
+ display: inline;
+}
+
+#header {
+	color: #000;
+	width: 100%;
+	float: left;
+	height: 25px;
+	background-color: #B6B6B6;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#logo {
+	color: #000;
+	width: 100%;
+	float: left;
+	height: 85px;
+	background-color: #FFFFFF;
+}
+#footer {
+	width: 100%;
+	font:Delius;
+	/*height: 25px;*/
+	clear: both;
+	color: #333;
+	font-weight:bold;
+	background: #EEEEEE;
+}
+
+#navigation {
+	float: left;
+	width: 100%;
+	height: 20px;
+	color: #333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	
+}
+
+.topMenu {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	padding-right: 2px;
+	padding-left: 2px;
+	padding-top: 2px;
+}
+
+
+th {
+	font: Delius;
+	font-size: ;
+	font-weight: bold;
+	color: #FFF;
+	font-size: large;
+	text-align: left;
+}
+
+.TRow {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	color: #FFF;
+	text-align: left;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 0px;
+}
+.footerBottom {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #B6B6B6;
+}

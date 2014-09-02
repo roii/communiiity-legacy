@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<title>Using Magicline plugin &mdash; CKEditor Sample</title>
+	<meta charset="utf-8">
+	<script src="ckeditor.js"></script>
+	<link rel="stylesheet" href="sample.css"> 
+</head>
+<body>
+	 
+	<div>
+		<label for="editor1">
+			Editor 1:
+		</label>
+		<div class="description">
+			<p>
+				This editor uses a default <strong>Magicline</strong> setup.
+			</p>
+		</div>
+		<textarea cols="80" id="editor1" name="editor1" rows="10">
+		               ffff
+		</textarea>
+		<script>
+
+			// This call can be placed at any point after the
+			// <textarea>, or inside a <head><script> in a
+			// window.onload event handler.
+
+			CKEDITOR.replace( 'editor1', {
+				extraPlugins: 'magicline',	// Ensure that magicline plugin, which is required for this sample, is loaded.
+				allowedContent: true		// Switch off the ACF, so very complex content created to
+											// show magicline's power isn't filtered.
+			} );
+
+		</script>
+	</div> 
+</body>
+</html>

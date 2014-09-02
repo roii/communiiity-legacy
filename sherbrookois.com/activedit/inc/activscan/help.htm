@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<title>&lt;cf_activedit&gt;</title>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080"><FONT FACE="Arial"><STRONG><P>&lt;cf_activescan&gt;</FONT></STRONG></P>
+<TABLE BORDER =1 CELLSPACING=1 BORDERCOLOR="#000000" CELLPADDING=2>
+<TR><TD VALIGN="center">
+<P ALIGN="center"><STRONG>Attribute</STRONG></P></TD>
+<TD VALIGN="center"><P ALIGN="center"><STRONG>Type</STRONG></P></TD>
+<TD VALIGN="center"><P align="center"><STRONG>State</STRONG></P></TD>
+<TD VALIGN="center"><P ALIGN="center"><STRONG>Description</STRONG></P></TD>
+</TR>
+<TR><TD VALIGN="center"><P align=left><STRONG>width</STRONG></P></TD>
+<TD VALIGN="center">
+<P align=left>Integer</P>  </TD>
+<TD VALIGN="center">
+<FONT COLOR="#ff0000"><P align=left></FONT>Default: 
+      300&nbsp;&nbsp;&nbsp;&nbsp; </P></TD>
+<TD VALIGN="center">
+<P align=left>Sets the width of the control</P>    </TD>
+</TR>
+<TR><TD VALIGN="center"><P align=left><STRONG>height&nbsp;</STRONG></P></TD>
+<TD VALIGN="center">
+<P align=left>Integer</P></TD>
+<TD VALIGN="center">
+<FONT COLOR="#ff0000"><P align=left></FONT>Default: 400</P></TD>
+<TD VALIGN="center">
+      <P align=left>Sets the height of the control </P>           
+      </TD>
+</TR>
+<TR><TD VALIGN="center"><P align=left><STRONG>inc</STRONG></P></TD>
+<TD VALIGN="center">
+<P align=left>URL trailing /</P></TD>
+<TD VALIGN="center">
+<P align=left><FONT color=#ff0000>REQUIRED</FONT></P> </TD>
+<TD VALIGN="center">
+<P align=left>URL to include files</P>         </TD>
+</TR>
+<TR><TD VALIGN="center">
+<STRONG><P align=left>imagepath</STRONG></P></TD>
+<TD VALIGN="center">
+<P align=left>Path trailing \</P></TD>
+<TD VALIGN="center"><P align=left><FONT color=#ff0000>REQUIRED</FONT></P></TD>
+<TD VALIGN="center">
+<P align=left>path to save images on server</P>             </TD>
+</TR>
+  <TR>
+    <TD vAlign=center><STRONG>license</STRONG></TD>
+    <TD vAlign=center>  string</TD>
+    <TD vAlign=center><FONT color=#ff0000>REQUIRED</FONT></TD>
+    <TD vAlign=center>Your license string, required 
+      unless using on localhost or 127.0.0.1  </TD></TR>
+  <TR>
+    <TD vAlign=center><STRONG>onsave</STRONG></TD>
+    <TD vAlign=center>string</TD>
+    <TD vAlign=center> alert</TD>
+    <TD vAlign=center>
+      <P>Displays the message in onsaveaction</P> </TD></TR>
+  <TR>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>redirect</TD>
+    <TD vAlign=center>Redirects to the page in onsaveaction</TD></TR>
+  <TR>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>call</TD>
+    <TD vAlign=center>Calls the javascript code in onsaveaction</TD></TR>
+  <TR>
+    <TD vAlign=center><STRONG>onsaveaction</STRONG></TD>
+    <TD vAlign=center>string </TD>
+    <TD vAlign=center>onsave=alert</TD>
+    <TD vAlign=center>Specifies the message to display</TD></TR>
+  <TR>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>onsave=redirect</TD>
+    <TD vAlign=center>Specifies the URL to redirect to</TD></TR>
+  <TR>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>&nbsp;</TD>
+    <TD vAlign=center>onsave=call</TD>
+    <TD vAlign=center> Specifies the javascript code to 
+      execute </TD></TR>
+  <TR>
+    <TD vAlign=center><STRONG>imagename</STRONG></TD>
+    <TD vAlign=center>string</TD>
+    <TD vAlign=center>default="" <BR>(promptuser)</TD>
+    <TD vAlign=center>
+      <P>Specifies filename on server. Overrides users capability of naming 
+      file.</P>      
+       </TD></TR>
+
+</TABLE>
+<P><FONT face=Arial><STRONG>onsave attribute:</STRONG></FONT></P>
+<P><FONT face=Arial size=2>The onsave attribute can be one of&nbsp;the following 
+options:<BR></FONT><FONT face=Arial size=2><BR></FONT></P>
+<UL type=square>
+<li> <STRONG>alert:</STRONG> Display<FONT face=Arial><FONT face="Times New Roman">    s an 
+  alert window&nbsp;with the&nbsp;</FONT></FONT>message 
+  contained in the onsaveaction attribute.
+  <LI><STRONG>redirect:</STRONG> Redirects the user to the 
+  URL contained in the onsaveaction attribute.
+  <LI><STRONG>call:</STRONG> Calls the javascript command contained in the 
+  onsaveaction attribute.<BR>&nbsp;&nbsp;&nbsp;&nbsp; This is in the form 
+  of&nbsp; "foobar( );"</LI>
+</UL>
+
+  <FONT face=Arial><STRONG>Sample Implementation</STRONG></FONT><FONT 
+  face=Arial>
+
+<BR></FONT><FONT FACE="Arial" SIZE=2>&lt;cf_activescan&nbsp; <BR>
+&nbsp;&nbsp;inc="http://me.com/admin/inc/"<BR>&nbsp; imagepath="c:\uploads\"<BR>&nbsp; 
+license="abcdefgh"<BR></FONT><FONT face=Arial size=2>&nbsp; 
+onsave="redirect"<BR>&nbsp; 
+onsaveaction="http://me.com/success.cfm?file=%file%"<BR>&gt;</FONT>
+<FONT face=Arial 
+size=2>
+<p>
+<b>Tips:</b><br>
+<ul type="square">
+<li>Clients need to use Internet Explorer 4 or above (tested on IE 4, IE 5)
+<li>You will need one 'inc' directory per domain name.
+  <LI>In the onsaveaction attribute, you can insert the filename saved by 
+  including&nbsp;the identifier "%file%" within the string.<BR><BR>Examples: 
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp; onsave="alert"<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+  onsaveaction="Your file was saved as %file%"<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp; onsave="call"<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+  onsaveaction="doSomething( '%file%' )"<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+  onsave="redirect"<BR>&nbsp;&nbsp;&nbsp;&nbsp;
+  onsaveaction="http://me.com/success.cfm?filename=%file%"</LI>          
+</ul> </FONT></BODY>
+</HTML>

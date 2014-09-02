@@ -1,0 +1,61 @@
+CFDEV.com (TM) Developer's Exchange Software License Agreement
+ 
+Important Notice
+
+This agreement applies to the download and use of Any custom tags, applications, extensions and components (collectively, "Software Components") posted on the Developer's Exchange and, in the case of Software Components created by CFDEV.com or its owners or parent companies, where applicable, , subsequently redistributed. THIS AGREEMENT IS A LEGAL CONTRACT BETWEEN YOU AND CFDEV.com WHICH SPECIFIES THE LICENSE TERMS AND WARRANTY AND LIABILITY LIMITATIONS REGARDING YOUR USE OF SOFTWARE COMPONENTS PRODUCED BY CFDEV.COM. NON-CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, SOFTWARE COMPONENTS AVAILABLE THROUGH THE DEVELOPER'S EXCHANGE ARE SUBJECT TO THE SPECIFIC LICENSE CONDITIONS OF THEIR RESPECTIVE AUTHORS, AND ARE ADDITIONALLY SUBJECT TO THE BOTH THE LIABILITY
+AND WARRANTY LIMITATIONS OF THIS LICENSE AGREEMENT. INSTALLATION OR USE OF THESE SOFTWARE COMPONENTS INDICATES YOUR ACCEPTANCE OF THIS AGREEMENT.  IF YOU DO NOT AGREE WITH THE TERMS OF THIS AGREEMENT, DO NOT DOWLOAD, INSTALL OR USE ANY SOFTWARE COMPONENT.
+ 
+Not Commercial Software
+
+THE SOFTWARE COMPONENTS SUBJECT TO THIS AGREEMENT ARE NOT COMMERCIAL SOFTWARE.  THEY ARE NOT COVERED BY ANY OTHER WARRANTY CONTAINED IN ANY OTHER LICENSE AGREEMENT BETWEEN YOU AND CFDEV.COM.  CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, HAS PERFORMED NO QUALITY ASSURANCE TESTING AND WILL NOT MAINTAIN AND SUPPORT ANY SOFTWARE COMPONENTS UNLESS OTHERWISE EXPLICITLY INDICATED ON THE CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, DEVELOPER'S EXCHANGE IN REFERENCE TO SPECIFIC SOFTWARE  COMPONENTS.
+ 
+Limited License to Use and Distribute Subject to the terms of this Agreement, you may install and sublicense others to install one exact object code copy of any Software Component that has been submitted to the Developer's Exchange by CFDEV.com or its owners or parent companies, where applicable, Corporation for each licensed copy of the ColdFusion Server software.  All such sublicenses must be accompanied by an unabridged copy of this license agreement, and it must be presented for review and affirmative acceptance by the sublicensee prior to the installation of the CFDEV.com or its owners or parent companies, where applicable, Software Component. You may copy and redistribute the Software Component only with applications built for use with ColdFusion Server software.  Each server upon which your application is to run must have installed on it a separately licensed copy of ColdFusion Server.  You are solely responsible for all expenses incurred in connection with your activities under this Agreement.  You may not appoint subdistributors.  Under no circumstances may you quote a separate fee for or a value ascribed to any CFDEV.com
+Software Component.
+ 
+YOU ACKNOWLEDGE THAT THIS LIMITED LICENSE APPLIES ONLY TO SOFTWARE COMPONENTS SUBMITTED TO THE DEVELOPER'S EXCHANGE BY CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, CORPORATION.  CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, GRANTS YOU NO RIGHTS WHATSOEVER IN ANY SOFTWARE COMPONENTS SUBMITTED BY ANY PERSON OR PARTY OTHER THAN CFDEV.COM.  ANY  LICENSE TERMS FOR SUCH SOFTWARE COMPONENTS WILL BE CONTAINED IN THE SOFTWARE COMPONENTS THEMSELVES, AND YOU ARE SOLELY RESPONSIBLE FOR REVIEWING, UNDERSTANDING AND COMPLYING WITH ANY SUCH LICENSE TERMS.  THE INCLUSION OF SUCH THIRD-PARTY SOFTWARE COMPONENTS DOES NOT IMPLY AN ENDORSEMENT OR RECOMMENDATION OF SUCH SOFTWARE COMPONENTS.
+ 
+No Additional Licenses
+
+This Agreement does not authorize you, in any manner or medium, to use CFDEV.com's names, logos or trademarks or to indicate that you are using an CFDEV.com or its owners or parent companies, where applicable, Software Component in connection with your application, other than the inclusion and presentation of this agreement as set forth above. You acknowledge and agree that all rights, title and interest in and to the Software Component belong to CFDEV.com or its owners or parent companies, where applicable, or the creator of such Software Component. You do not derive and will not be able to assert any title or interest in the Software Component other than the rights and licenses granted under this Agreement. You may not modify, translate, decompile, disassemble or reverse engineer the Software Component.
+ 
+You acknowledge and agree that you do not receive any rights to patents, copyrights, trademarks or any other rights or licenses belonging to CFDEV.com or its owners or parent companies, where applicable, or other creator of the Software Component beyond those expressly granted in this Agreement (or any agreement accompanying a third-party Software Component).
+ 
+Termination
+
+CFDEV.com or its owners or parent companies, where applicable, may terminate this Agreement at any time for any reason (or no reason), with or without notice. Upon any termination of this Agreement, all rights granted herein shall immediately terminate, and you must promptly return to CFDEV.com or its owners or parent companies, where applicable, or destroy all copies of all CFDEV.com or its owners or parent companies, where applicable, Software Components
+obtained from the Developer's Exchange.  
+ 
+Risk of Use
+
+YOU UNDERSTAND THAT THE SOFTWARE COMPONENTS MAY NOT HAVE BEEN TESTED AND MAY HAVE ERRORS AND PRODUCE UNEXPECTED RESULTS.  YOUR USE OF ANY SOFTWARE COMPONENET IS ENTIRELY AT YOUR OWN RISK. 
+ 
+No Warranty
+
+THE SOFTWARE COMPONENTS ARE PROVIDED "AS IS" AND WITHOUT ANY WARRANTY OR REPRESENTATION WHATSOEVER, EXPRESS OR IMPLIED. CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTIES OF MERCHANTABILITY, TITLE, AND FITNESS
+FOR A PARTICULAR PURPOSE. 
+ 
+Indemnification
+
+You agree to defend, indemnify and hold harmless CFDEV.com or its owners or parent companies, where applicable, against and in respect of any claim, suit, loss, damages, obligations, penalty, deficiency or liability (including, without limitation, attorneys' fees) imposed upon, incurred by or asserted against CFDEV.com or its owners or parent companies, where applicable, that result from or are alleged to
+result from (a) any breach of this Agreement, (b) any acts, misrepresentations or omissions in connection with this Agreement, (c) any modification or alteration of a Software Component (other than one made by CFDEV.com), and/or (d) any warranty, condition, representation or indemnity
+granted by you for any Software Component.
+ 
+Limitation on Liability
+
+IN NO CASE SHALL CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES OR LOSS, INCLUDING, WITHOUT LIMITATION, LOST PROFITS OR THE INABILITY TO USE EQUIPMENT OR ACCESS DATA, WHETHER SUCH DAMAGES ARE BASED UPON A BREACH OF EXPRESS OR IMPLIED WARRANTIES, BREACH OF CONTRACT, NEGLIGENCE, STRICT TORT, OR ANY OTHER LEGAL THEORY.  THIS IS TRUE EVEN IF CFDEV.COM OR ITS OWNERS OR PARENT COMPANIES, WHERE APPLICABLE, IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  IN NO CASE WILL CFDEV.COM'S LIABILITY EXCEED THE AMOUNT OF THE LICENSE FEE ACTUALLY PAID BY YOU TO CFDEV.COM. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES SO THE WARRANTY LANGUAGE ABOVE MAY NOT APPLY TO YOU.  IN SUCH CASE, CFDEV.COM'S LIABILITIES SHALL BE LIMITED BY THIS LIMITATION ON LIABILITY PROVISION.
+ 
+Export Law Assurances
+
+You acknowledge that the Software Components are subject to the export control laws and regulations of the United States.  You confirm and agree that you will not export any Software Component, directly or indirectly, to any country or end-user that is subject to United States export restrictions, or import into any country, except as permitted by the laws and regulations of the applicable country.
+ 
+U.S. Government Restricted Rights
+
+If this license is acquired under a U.S. Government contract, use, duplication or disclosure by the U.S. Government is subject to restrictions as set forth in DFARS 252.227-7013(c)(1)(ii) for Department of Defense contracts and as set forth in FAR 52.227-19(a)-(d) for civilian agency contracts.  CFDEV.com or its owners or parent companies, where applicable, reserves all unpublished rights under the United States Copyright laws.  
+
+Security Issues
+
+CFDEV.com makes no warranties, implied or explicit, with regards to security issues arising from the use of  software obtained through CFDEV.com.  Proper use and setup of the software is the sole responsibility of the server administrator, webmaster, individual or entity through which the software is/will be used.
+ 
+Miscellaneous
+
+You have no authority to act on CFDEV.com's behalf or to bind CFDEV.com or its owners or parent companies, where applicable, to any obligation or representation, and you and CFDEV.com or its owners or parent companies, where applicable, shall not be deemed to be partners, joint venturers or agents of the other. The internal laws of the Commonwealth of Massachusetts control this Agreement if you are located in the United States or in any country other than Canada; the laws of the Province of Ontario shall control if you are located in Canada.  The provisions relating to No Additional Licenses, Termination, No Warranty, Limitation on Liability, Indemnification, Export Law Assurances and Miscellaneous shall survive the termination of this Agreement. This Agreement is the complete agreement between you and CFDEV.com or its owners or parent companies, where applicable, Corporation concerning the Software Component.  The failure or delay of CFDEV.com or its owners or parent companies, where applicable, to exercise any of its rights under this Agreement or upon any breach of this Agreement is not a waiver of those rights or of the breach.

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rockstarapps>
+    
+
+<file name="modules/contentbox-ui/layouts/TrulySimple/includes/css/style.css">
+        <min>true</min>
+        <comp>false</comp>
+        <closureCompiler>false</closureCompiler>
+        <gZip>false</gZip>
+        <resolveImports>true</resolveImports>
+        <urlRewriting>false</urlRewriting>
+        <autoBuild>false</autoBuild>
+        <lineLength>-1</lineLength>
+        <autoTimestamps>false</autoTimestamps>
+        <removeLogs>false</removeLogs>
+        <oldFileNames>true</oldFileNames>
+        <dependencies>
+            <file>modules/contentbox-ui/layouts/TrulySimple/includes/css/style.css</file>
+        </dependencies>
+        <properties/>
+    </file>
+</rockstarapps>

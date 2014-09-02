@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameChart autoAdjust="false" is3D="false" isInterpolated="true">
+		<elements shapeSize="45" lineWidth="2" drawShadow="true" fixedWidth="3" drawOutline="true">
+			<morph morph="Grow"/>
+		</elements>
+</frameChart>

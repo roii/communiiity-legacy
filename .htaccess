@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase / 
+
+RewriteRule ^vote$ /index.cfm?fuseaction=vote
+RewriteRule ^vote/$ /index.cfm?fuseaction=vote
+RewriteRule ^projects/([^/.]+)/?$ /index.cfm?fuseaction=projects&fusesubaction=campaigndetails&documentID=5&projectmode=template&campID=$1 [NC,L]
+RewriteRule ^projects/createwidget/([^/.]+)/?$ /index.cfm?fuseaction=projects&fusesubaction=campaigncreatewidget&documentID=5&projectmode=template&campID=$1 [NC,L]
+RewriteRule ^projects/widget/([^/.]+)/?$ /index.cfm?fuseaction=projects&fusesubaction=campaignwidget&documentID=5&projectmode=template&campID=$1 [NC,L]
+RewriteRule ^user/profile/([^/.]+)/?$ /index.cfm?fuseaction=myprofile&fusesubaction=index&uid=$1 [NC,L]

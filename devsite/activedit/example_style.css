@@ -1,0 +1,14 @@
+.title {
+	font-family: Verdana;
+	font-size: small;
+	color: gray;
+	font-weight: bold;
+	border-bottom: 1px solid silver;
+}
+
+.emphasize {
+	font-family: Verdana;
+	color: gray;
+	font-weight: bold;
+	font-style : italic;
+} 

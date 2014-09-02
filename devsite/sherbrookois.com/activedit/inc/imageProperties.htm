@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!---
+  // Application: Activedit
+  // Name: imageProperties.htm
+  // Function: Display and edit image properties
+  // Authors: Greg Alton (support@cfdev.com)
+  // Company: CFDEV.COM
+  // Version: 4
+  // Date: 7/12/2002
+  // Revisions:
+--->
+
+<html>
+<head>
+	<title>Image Properties</title>
+	<style type="text/css">
+    	BODY {
+			font-family: verdana, arial;
+			font-size : 10pt;
+		}
+		A {
+        	color : 1d039e;
+	        text-decoration : none;
+    	}
+		A:Hover {
+	  		color : 1d039e;
+	        text-decoration : underline;
+    	}
+		.heading {
+	  		font-family: Verdana, Arial, Helvetica, Sans-Serif;
+			font-size: 10pt;
+			color: black;
+			font-weight: bold;
+			background-color: white;
+		}
+		.cellheading {
+			font-family: Verdana, Arial, Helvetica, Sans-Serif;
+			font-size: 10pt;
+			color: white;
+			font-weight: bold;
+		}
+		.input { 
+			background-color: white;
+			font-size: 10pt;
+			color : gray;
+		}
+	</style>
+	<cfoutput>
+	<script>
+
+</script>
+	<script language="JavaScript">
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) {
+					return pair[1];
+				}
+			}	
+			alert('Query Variable ' + variable + ' not found');
+		}		
+		var num = getQueryVariable("instance");
+	</script>
+	</cfoutput>
+
+	<script language="JavaScript">
+		var oSel = window.opener.aeObjects[num].DOM.selection.createRange();
+
+		// Walking through the ControlRange collection
+		var sAlign = oSel(0).align;
+		var sAlt = oSel(0).alt;
+		var sBorder = oSel(0).border;
+		var sHeight = oSel(0).height;
+		var sName = oSel(0).nameProp;
+		var sSrc = oSel(0).src;
+		var sSize = oSel(0).fileSize;
+		var sWidth = oSel(0).width; 
+		
+		function init() {
+		
+		if (sAlign.toLowerCase() == "") {
+			document.all.oAlign.selectedIndex = 0;
+		} else if (sAlign.toLowerCase() == "absmiddle") {
+				document.all.oAlign.selectedIndex = 1;
+		} else if (sAlign.toLowerCase() == "middle") {
+				document.all.oAlign.selectedIndex = 2;
+		} else if (sAlign.toLowerCase() == "bottom") {
+				document.all.oAlign.selectedIndex = 3;
+		} else if (sAlign.toLowerCase() == "top") {
+				document.all.oAlign.selectedIndex = 4;
+		} else if (sAlign.toLowerCase() == "left") {
+				document.all.oAlign.selectedIndex = 5;
+		} else if (sAlign.toLowerCase() == "right") {
+				document.all.oAlign.selectedIndex = 6;
+		} else if (sAlign.toLowerCase() == "baseline") {
+				document.all.oAlign.selectedIndex = 7;
+		} else if (sAlign.toLowerCase() == "texttop") {
+				document.all.oAlign.selectedIndex = 8;
+		} else if (sAlign.toLowerCase() == "absbottom") {
+				document.all.oAlign.selectedIndex = 9;
+		}
+	
+		
+		document.all.oName.innerText = sName;
+		document.all.oSize.innerText = sSize + " bytes";
+		document.all.oAlt.value = sAlt;
+		document.all.oBorder.value = sBorder;
+		document.all.oHeight.value = sHeight;
+		document.all.oWidth.value = sWidth;
+		document.all.oSrc.value = sSrc;
+		
+		}
+		
+		function writeProps() { 
+			oSel(0).align = document.all.oAlign.value;
+			oSel(0).alt = document.all.oAlt.value;
+			oSel(0).border = document.all.oBorder.value;
+			oSel(0).height = document.all.oHeight.value;
+			oSel(0).width = document.all.oWidth.value;
+			oSel(0).src = document.all.oSrc.value;
+			
+			oSel.select();
+			window.close();
+		}
+		
+	</script>
+</head>
+
+<body link="#1d039e" vlink="#1d039e" onload="init();">
+<form id="imgPropForm" style="position:absolute">
+	<table cellspacing="0" cellpadding="3" border="1" bordercolor="silver" width="350" bgcolor="silver">
+		<tr>
+			<td class="heading" colspan="2">Image Properties</td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">name:</td>
+			<td class="input"><span id="oName"></span></td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">size:</td>
+			<td class="input"><span id="oSize"></span></td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">align:</td>
+			<td class="input" align="left">
+				<select id="oAlign">
+			        <option name="" value="" selected>&nbsp;</option>
+			        <option name="absmiddle" value="absmiddle">absmiddle</option>
+			        <option name="middle" value="middle">middle</option>
+			        <option name="bottom" value="bottom">bottom</option>
+			        <option name="top" value="top">top</option>
+			        <option name="left" value="left">left</option>
+			        <option name="right" value="right">right</option>
+			        <option name="baseline" value="baseline">baseline</option>
+			        <option name="texttop" value="texttop">texttop</option>
+			        <option name="absbottom" value="absbottom">absbottom</option>
+			      </select>
+			</td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">alt:</td>
+			<td class="input" align="left"><input id="oAlt" type="text" size="40"></td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">border:</td>
+			<td class="input" align="left"><input id="oBorder" type="text" size="1" value="0"></td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">height:</td>
+			<td class="input" align="left"><input id="oHeight" type="text" size="3"></td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">width:</td>
+			<td class="input" align="left"><input id="oWidth" type="text" size="3"></td>
+		</tr>
+		<tr>
+			<td class="cellHeading" align="right">src:</td>
+			<td class="input" align="left"><input id="oSrc" type="text" size="40" value="http://"></td>
+		</tr>
+	</table>
+	<div align="center"><a href="javascript:writeProps()"><img src="images/down.gif" width=23 height=22 alt="" border="0" align="absmiddle"></a>&nbsp;<a href="javascript:writeProps()"><b>Apply</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:close()"><img src="images/delete.gif" width=18 height=17 alt="Close This window" border="0" align="absmiddle"></a>&nbsp;<a href="javascript:close()"><b>Cancel</b></a></div>
+</form>
+
+
+</body>
+</html>

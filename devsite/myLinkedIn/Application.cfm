@@ -1,0 +1,1 @@
+﻿<cfapplication name="3pV" sessionmanagement="Yes" sessiontimeout="#createtimespan(0,1,0,0)#" clientmanagement="Yes">

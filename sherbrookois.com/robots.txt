@@ -1,0 +1,46 @@
+# Exclude Files From All Robots:
+
+User-agent: *
+Disallow: /join/act_signup.cfm
+Disallow: /join/act_register_step2.cfm
+Disallow: /join/act_confirm_code.cfm
+Disallow: /administration
+Disallow: /admin
+
+Disallow: /ideas/act_add_draft.cfm
+Disallow: /ideas/act_add_idea.cfm
+Disallow: /ideas/act_add_idea_vote.cfm
+Disallow: /ideas/act_critical_votes.cfm
+Disallow: /ideas/act_delete_draft.cfm
+Disallow: /ideas/act_edit_draft.cfm
+Disallow: /ideas/act_edit_idea.cfm
+Disallow: /ideas/act_email_stage1_approve.cfm
+Disallow: /ideas/act_email_stage1_decline.cfm
+Disallow: /ideas/act_email_stage2_approve.cfm
+Disallow: /ideas/act_email_stage2_decline.cfm
+Disallow: /ideas/act_email_stage3_approve.cfm
+Disallow: /ideas/act_email_stage3_decline.cfm
+Disallow: /ideas/act_email_stage4_approve.cfm
+Disallow: /ideas/act_email_stage4_decline.cfm
+Disallow: /ideas/act_fix_pending.cfm
+Disallow: /ideas/act_forgot_password.cfm
+Disallow: /ideas/act_mod_comment_add.cfm
+Disallow: /ideas/act_mod_comment_edit.cfm
+Disallow: /ideas/act_move_idea.cfm
+Disallow: /ideas/act_multivote.cfm
+Disallow: /ideas/act_new_critical_votes.cfm
+Disallow: /ideas/act_remove_feedback.cfm
+Disallow: /ideas/act_remove_idea.cfm
+Disallow: /ideas/act_report_profanity.cfm
+Disallow: /ideas/act_vote.cfm
+Disallow: /ideas/act_watchlist_add.cfm
+Disallow: /ideas/act_watchlist_remove.cfm
+
+
+
+Disallow: /goals/act_archive_goal.cfm
+Disallow: /goals/act_add_goal.cfm
+Disallow: /goals/act_edit_goal.cfm
+Disallow: /goals/act_remove_goal.cfm
+
+# End robots.txt file

@@ -1,0 +1,305 @@
+	<style>
+	
+	A:link	
+	{
+		COLOR: Gray;
+		TEXT-DECORATION: underline;
+	}
+	A:hover
+	{
+	    TEXT-DECORATION: underline;
+		COLOR: Black;
+	}
+	A:visited
+	{
+		COLOR: Gray;
+		TEXT-DECORATION: underline;
+	}
+	
+	
+	
+	A:link.textlink	
+	{
+		COLOR: #0000ff;
+		TEXT-DECORATION: underline;
+	}
+	A:visited.textlink	
+	{
+		COLOR: #0000ff;
+		TEXT-DECORATION: underline;
+	}
+	A:hover.textlink
+	{
+		COLOR: #0000ff;
+		TEXT-DECORATION: none;
+	}
+	
+	
+	A:link.blacklink	
+	{
+		COLOR: Black;
+		TEXT-DECORATION: none;
+	}
+	A:visited.blacklink	
+	{
+		COLOR: Black;
+		TEXT-DECORATION: none;
+	}
+	A:hover.blacklink
+	{
+		COLOR: Black;
+		TEXT-DECORATION: underline;
+	}
+	
+	
+	A:link.graylink	
+	{
+		COLOR: Gray;
+		TEXT-DECORATION: none;
+	}
+	A:visited.graylink	
+	{
+		COLOR: Gray;
+		TEXT-DECORATION: none;
+	}
+	A:hover.graylink
+	{
+		COLOR: Gray;
+		TEXT-DECORATION: none;
+	}
+	
+	
+	
+	
+	.small
+	{
+	    FONT-SIZE: 9px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}	
+	
+	
+	
+	
+	.normal
+	{
+	    FONT-SIZE: 11px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}
+	
+	.normalgray
+	{
+	    FONT-SIZE: 11px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}
+	
+	.normal_10_gray
+	{
+	    FONT-SIZE: 10px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}
+	
+	.normal_11_gray
+	{
+	    FONT-SIZE: 11px;
+	    COLOR: #555555;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 160%;
+	}
+	
+	.normal_10
+	{
+	    FONT-SIZE: 10px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}
+	
+	.normal_12
+	{
+	    FONT-SIZE: 12px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}
+	
+	.normal_12_spaced
+	{
+	    FONT-SIZE: 12px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+		LETTER-SPACING: 5px;
+	}
+	
+	.normalgray_12
+	{
+	    FONT-SIZE: 12px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}
+	
+	
+	
+	.normal_14
+	{
+	    FONT-SIZE: 14px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 100%;
+	}
+	
+	.normalgray_14
+	{
+	    FONT-SIZE: 14px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 100%;
+	}	
+	
+	
+	
+	.normal_16
+	{
+	    FONT-SIZE: 16px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 100%;
+	}
+	
+	.normalgray_16
+	{
+	    FONT-SIZE: 16px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 100%;
+	}	
+	
+	
+	
+	.normal_18
+	{
+	    FONT-SIZE: 18px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}
+	
+	.normalgray_18
+	{
+	    FONT-SIZE: 18px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;
+	}	
+	
+	
+	
+	
+	.largeblack_20
+	{
+	    FONT-SIZE: 20px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 150%;
+	}
+	
+	.largegray_20
+	{
+	    FONT-SIZE: 20px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		FONT-WEIGHT: bold; 
+		LINE-HEIGHT: 150%;
+	}
+	
+	
+	
+	
+	.largeblack_22
+	{
+	    FONT-SIZE: 22px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 150%;
+	}
+	.largegray_22
+	{
+	    FONT-SIZE: 22px;
+	    COLOR: Gray;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		FONT-WEIGHT: bold; 
+		LINE-HEIGHT: 150%;
+	}
+
+
+	.largeblack_28
+	{
+	    FONT-SIZE: 28px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 120%;
+	}
+	
+			
+	
+	td
+	{
+		FONT-SIZE: 11px;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+	    FONT-DECORATION: NONE;
+		LINE-HEIGHT: 130%;		
+	}
+	
+		
+	.bluefield
+	{
+		FONT-SIZE: 9px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+		FONT-WEIGHT: normal;		
+		background-color: #D8E1F5;
+		LINE-HEIGHT: 130%;
+		border: solid 1px #000000;
+	}
+	
+	.whitefield
+	{
+		FONT-SIZE: 9px;
+	    COLOR: Black;
+	    FONT-FAMILY: Verdana, Tahoma, Trebuchet MS;
+		FONT-WEIGHT: normal;		
+		background-color: White;
+		LINE-HEIGHT: 130%;
+		border: solid 1px silver;
+	}
+	
+	</style>

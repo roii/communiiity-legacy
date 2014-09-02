@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase / 
+
+RewriteRule ^vote$ /index.cfm?fuseaction=vote [L]
+RewriteRule ^vote/$ /index.cfm?fuseaction=vote [L]
+RewriteRule ^campaigns/([A-Za-z0-9-]+)/?$ /index.cfm?fuseaction=Campaigns&fusesubaction=campaigndetails&documentID=5&projectmode=template&campID=$1 [NC,L]

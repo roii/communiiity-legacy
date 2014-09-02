@@ -1,0 +1,91 @@
+<myLittleAdmin>
+
+	<sqlservers>
+		<sqlserver 
+			address="Srv\Instance" 
+			name="SQL 2K5 Instance" 
+			sysadminconnection="false"
+			sysadminconnectionid="1"
+		/>
+		<sqlserver address="sql.yourdomain.com" name="SQL 2K8" />
+		<sqlserver address="127.0.0.1" name="localhost" />
+	</sqlservers>
+
+	<languages>
+		<language culture="en-US" name="English" default="true" />
+		<language culture="fr-FR" name="French" />
+		<language culture="de-DE" name="Deutsch" />
+		<language culture="ja-JP" name="Japanese" />
+	</languages>
+
+	<skins>
+		<skin folder="default" name="default" />
+	</skins>
+
+	<profiles>
+		<profile id="default" location="xml/profiles/default.xml" />
+	</profiles>
+
+	<dateformats>
+		<dateformat format="%Y%m%d %H:%M" name="20061026 17:52" />
+		<dateformat format="%Y/%m/%d %H:%M" name="2006/10/26 17:52" />
+		<dateformat format="%Y/%m/%d %I:%M %p" name="2006/10/26 5:52 PM" />
+		<dateformat format="%d/%m/%Y %H:%M" name="26/10/2006 17:52" />
+		<dateformat format="%d/%m/%Y %I:%M %p" name="26/10/2006 5:52 PM" />
+		<dateformat format="%m/%d/%Y %H:%M" name="10/26/2006 17:52" />
+		<dateformat format="%m/%d/%Y %I:%M %p" name="10/26/2006 5:52 PM" />
+	</dateformats>
+
+	<csvseparators>
+		<csvseparator value="{SEMICOLON}" name=";" />
+		<csvseparator value="{COMMA}" name="," />
+		<csvseparator value="{TAB}" name="{TAB}" />
+	</csvseparators>
+
+	<tools>
+		<backupwh
+			backupfolder="\\Server\dbbackup\" 
+			backupurl="http://mylittleadmin.host.com/dbbackup" 
+			usesysadminconnection="true"
+		/>
+		<restorewh
+			uploadfolder="\\Server\dbupload\"
+			deleteafterrestore="true"
+			usesysadminconnection="true"
+		/>
+		<mylittlebackup
+			url="http://localhost/mlb/silentlogon.aspx"
+		/>
+		<newquery
+			rowcountdefaultvalue="0"
+			textsizedefaultvalue="2147483647"
+		/>
+	</tools>
+
+	<connection>
+		<authentications>
+			<authentication value="sql" name="lSqlAuthentication" localization="true" />
+			<authentication value="windows" name="lWindowAuthentication" localization="true" />
+		</authentications>
+		<protocols>
+			<protocol value="" name="lDefault" localization="true" />
+			<protocol value="dbnmpntw" name="lNamedPipes" localization="true" />
+			<protocol value="dbmsrpcn" name="lMultiprotocol" localization="true" />
+			<protocol value="dbmsadsn" name="lAppleTalk" localization="true" />
+			<protocol value="dbmsgnet" name="lVIA" localization="true" />
+			<protocol value="dbmslpcn" name="lSharedMemory" localization="true" />
+			<protocol value="dbmsspxn" name="lIPXSPX" localization="true" />
+			<protocol value="dbmssocn" name="lTCPIP" localization="true" />
+		</protocols>
+		<packetsize value="4096" />
+		<connectiontimeout value="15" />
+		<executiontimeout value="0" />
+		<debug value="false" />
+		<checkmssqlversion 
+			value="true"
+			mla2000url="http://localhost/mla_2000/silentlogon.asp"
+		/>
+		<askdb value="true" />
+	</connection>
+
+</myLittleAdmin>

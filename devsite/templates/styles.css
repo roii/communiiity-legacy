@@ -1,0 +1,58 @@
+<style>
+
+
+A:link	
+{
+	text-decoration: underline;
+}
+
+A:visited	
+{
+	text-decoration: underline;
+}
+
+A:hover
+{
+	text-decoration: none;
+}		
+
+
+
+
+H1 { 
+	font-size: 20px;
+	font-family: arial, verdana, helvetica;
+	}
+
+H2 { 
+	font-size: 16px;
+	font-family: arial, verdana, helvetica;
+	}
+
+H3 { 
+	font-size: 14px;
+	font-family: arial, verdana, helvetica;
+	}
+
+H4 { 
+	font-size: 12px;
+	font-family: arial, verdana, helvetica;
+	}
+
+	
+td {
+	font-size: 11px;
+	font-family: arial, verdana, helvetica;
+	}
+
+
+.field {
+	font-size: 11px;
+	color: 0a0a0a;
+	font-family: Verdana, Tahoma, Trebuchet MS;
+	font-weight: normal;		
+	background-color: White;
+	border: solid 1px #b4b4b4;
+	}
+
+</style>

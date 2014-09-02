@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase / 
+
+RewriteRule ^vote$ /index.cfm?fuseaction=vote [L]
+RewriteRule ^vote/$ /index.cfm?fuseaction=vote [L]

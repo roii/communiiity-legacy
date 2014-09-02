@@ -1,0 +1,70 @@
+<beans>
+
+<bean id="modelGlueConfiguration" class="ModelGlue.unity.framework.ModelGlueConfiguration">
+    <property name="reload"><value>false</value></property>
+    <property name="rescaffold"><value>true</value></property>
+    <property name="debug"><value>false</value></property>
+    <property name="defaultEvent"><value>Main</value></property>
+    <property name="reloadPassword"><value>true</value></property>
+    <property name="viewMappings"><value>/wiki/views</value></property>
+    <property name="generatedViewMapping"><value>/wiki/views/generated</value></property>
+    <property name="configurationPath"><value>config/ModelGlue.xml</value></property>
+    <property name="scaffoldPath"><value>config/scaffolds/Scaffolds.xml</value></property>
+    <property name="statePrecedence"><value>form</value></property>
+    <property name="reloadKey"><value>init</value></property>
+    <property name="eventValue"><value>event</value></property>
+    <property name="defaultTemplate"><value>index.cfm</value></property>
+    <property name="defaultExceptionHandler"><value>exception</value></property>
+    <property name="defaultCacheTimeout"><value>5</value></property>
+    <property name="defaultScaffolds"><value>list,edit,view,commit,delete</value></property>
+ </bean>  
+
+<bean id="CanvasConfig" class="ModelGlue.Bean.CommonBeans.SimpleConfig">
+  <property name="config">
+    <map>
+      <entry key="dsn"><value>sherbrooke_dsn</value></entry>
+      <entry key="root"><value>wiki</value></entry>
+
+      <entry key="AppTitle"><value>Sherbrookois Wiki</value></entry>
+      <entry key="EmailOnChange"><value></value></entry>
+      <entry key="DatabaseType"><value>mysql</value></entry><!-- oracle, mssql, mysql -->
+      <entry key="DatabaseTablePrefix"><value></value></entry><!-- prefix all the table names with this (optional); useful for having multiple wiki tables in the same database; suggestion is to use something like "cw_" -->
+      <entry key="RoleList"><value>all,sysop,admin,user</value></entry>
+      <entry key="LoginRequiredForEditing"><value>true</value></entry>
+      <entry key="LoginRequiredForViewing"><value>false</value></entry>
+      <entry key="AllowRolesForEditing"><value>true</value></entry><!-- this affects output in dsp.edit.cfm -->
+      <entry key="AllowRolesForViewing"><value>false</value></entry><!-- this affects output in dsp.edit.cfm -->
+      <entry key="DefaultAuthRolesToEdit"><value>admin</value></entry><!-- comma-separated list of values from RoleList (sysop always has access) -->
+      <entry key="DefaultAuthRolesToView"><value>all</value></entry><!-- comma-separated list of values from RoleList (sysop always has access) -->
+      <entry key="UploadEnabled"><value>true</value></entry><!-- true or false -->
+      <entry key="UploadPath"><value>uploads</value></entry><!-- full path or folder relative to wiki root -->
+      <entry key="UploadAllowedExtensions"><value>jpg,jpeg,gif,png,mp3,pdf,pps,ppt,doc,xls,wpd,docx</value></entry>
+      <entry key="WikiTermsEnabled"><value>true</value></entry><!-- true or false -->
+      <entry key="WikiTOCMinItems"><value>4</value></entry><!-- integer (used in PageRender) -->
+	  <entry key="wiki"><value>Default</value></entry><!-- used to allow N wikis in one dsn -->
+    </map>
+  </property>
+</bean>
+
+<bean id="MimeTypes" class="ModelGlue.Bean.CommonBeans.SimpleConfig">
+  <property name="config">
+    <map>
+    	<!-- based on data from http://www.w3schools.com/media/media_mimeref.asp or http://www.webmaster-toolkit.com/mime-types.shtml -->
+      <entry key=""><value>application/octet-stream</value></entry>
+      <entry key="jpg"><value>image/jpeg,image/pjpeg</value></entry>
+      <entry key="jpeg"><value>image/jpeg,image/pjpeg</value></entry>
+      <entry key="gif"><value>image/gif</value></entry>
+      <entry key="png"><value>image/png</value></entry>
+      <entry key="doc"><value>application/msword</value></entry>
+      <entry key="ppt"><value>application/vnd.ms-powerpoint</value></entry>
+      <entry key="pps"><value>application/vnd.ms-powerpoint</value></entry>
+      <entry key="xls"><value>application/vnd.ms-excel</value></entry>
+      <entry key="mp3"><value>audio/mpeg</value></entry>
+      <entry key="pdf"><value>application/pdf</value></entry>
+      <entry key="wpd"><value>application/wordperfect</value></entry>
+      <entry key="docx"><value>application/octet-stream</value></entry>
+    </map>
+  </property>
+</bean>
+
+</beans>

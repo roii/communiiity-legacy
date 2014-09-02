@@ -1,0 +1,529 @@
+SNO,Variable,Value
+1,home,ACCUEIL
+2,issues,ENJEUX
+3,vote,VOTEZ
+4,login,LOGIN
+5,emailaddress,Adresse Email
+6,password,mot de passe
+7,loginnow,Connectez
+8,ortext,ou
+9,signinwith,connectez avec
+10,forgotPass,Mot de passe oubli&Aacute;e
+11,register,Inscrivez-vous
+12,registerheadingtext,Entrez votre adresse email dans le formulaire. Puis cliquez sur INSCRIVEZ-VOUS MAINTENANT!
+13,project,Projets
+14,category,Cat&eacute;gorie
+15,priority,Priorit&eacute;
+16,status,Statut
+17,value,Valeur
+18,showall,Montrer tout
+19,learnAbtSite,Apprenez-en plus
+20,aboutus,&Aacute; propos de nous
+21,careers,Carri&eacute;res
+22,press,Presse
+23,faq,FAQ
+24,help,Aide
+25,connect,Connect
+26,signuptoemail,Inscrivez-vous &Aacute; notre liste d'envoi
+27,AddCashProject,Ajouter un projet
+28,beingplan,&eacute;bauche
+29,availnow,Disponible
+30,inprog,En cours
+31,alldone,Tout est fait
+32,high,&Eacute;lev&eacute;
+33,normal,Normale
+34,low,Faible
+35,addprojecttitle,Ajouter un projet
+36,currstatus,Statut actuel
+37,addprojtitlefield,Titre
+38,projpic,Envoyer une image ou vid&eacute;o
+39,projintro,Pr&eacute;sentation
+40,addprojupmsg,200x200 image en taille r&eacute;elle.
+41,addprojdetails,D&eacute;tails
+42,agecrt,Age court
+43,agelng,Age longue
+44,shorttime,Courte dur&eacute;e
+45,maxtime,Temps maximum
+46,assignedto,Assign&eacute;e &aacute;
+47,payment,Paiement
+48,paymenttype,Type de paiement
+49,paidin,Paid In
+50,percentcomp,Pour cent complet
+51,featureproj,Feature Project
+52,yestitle,Oui
+53,notitle,Non
+54,addcashbttn,Ajouter un projet MAINTENANT
+55,cancelbttn,ANNULER
+56,money,Argent
+57,points,Points
+58,editcashheading,Modifier projet
+59,uploadmsg2,"Si vous avez d&eacute;j&aacute; t&eacute;l&eacute;charg&eacute; l&iacute;mage et que vous voulez le mettre &aacute;jour ou si vous n&aacute;vez pas t&eacute;l&eacute;charger plus t&oacute;t, alors vous Pouvez utiliser cette option."
+60,projectprior,Priorit&eacute; du projet
+61,updatecashbttn,MISE A JOUR DU PROJET
+62,brief,Br&eacute;ve
+63,beingdone,Se fait par
+64,tID,tID
+65,cash,argent
+66,offered,pr&eacute;sent&eacute;t
+67,expresstext,s'appliquer à travailler sur ce projet
+68,clickherehotlinklogin,Cliquez ici (hotlink &aacute; la disposition connect&eacute; membres seulement).
+69,clickherehotlink,Cliquez ici
+70,comments,Commentaires
+71,commentby,Commentaire de
+72,commentadd,commentaire ajout&eacute;
+73,nocommentsyet,Pas encore de commentaires!
+74,leavecomments,Laisser un commentaire
+75,name,nom
+76,emailtext,Email (ne sera pas affich&eacute;)
+77,commenttitle,commenter
+78,addcommenttitle,Ajouter un commentaire
+79,editprofile,Modifier le profil
+80,myDashboard,Tableau de bord
+81,mypersprofile,Profil myPersonal
+82,myPoints,myPoints
+83,purchasepts,Points d&aacute;chat
+84,Logout,D&eacute;connexion
+85,admintools,ADMIN TOOLS
+86,sitesettings,Param&eacute;tres du site
+87,admindash,Dashboard admin
+88,manheadersec,G&eacute;rer d&eacute;n-t&eacute;te
+89,manfootersec,G&eacute;rer Footer
+90,manactrew,G&eacute;rer Rewards Activit&eacute;
+91,manadmin,G&eacute;rer les administrateurs
+92,manbusi,G&eacute;rer des entreprises
+93,manchar,G&eacute;rer organismes de bienfaisance
+94,mandown,G&eacute;rer T&eacute;l&eacute;chargements
+95,manemalerts,G&eacute;rer les alertes E-mail
+96,location,Emplacement
+97,by,Par
+98,projorder,Ordre du projet
+99,disproj,Afficher Project
+100,browse,D&eacute;couvrir
+101,allproj,Tous les projets
+102,search,Rechercher
+103,msg1,Vous &eacute;tes &aacute; la recherche pour les cat&eacute;gories telles que ci-dessous
+104,msg2,Vous &eacute;tes &aacute; la recherche de toutes les cat&eacute;gories
+105,msg3,Tous les projets &eacute;num&eacute;r&eacute;s ci-dessous ont un statut
+106,msg4,Voici tous les projets qui ont un type de statut
+107,msg5,Tous les projets &eacute;num&eacute;r&eacute;s ci-dessous ont des priorit&eacute;s
+108,msg6,Voici tous les projets qui ont un type de priorit&eacute;s
+109,msg7,Il n&yacute; a pas de dossiers selon vos crit&eacute;res de recherche. S&iacute;l vous pla&iacute;t essayer &aacute; nouveau
+110,mngcamp,G&eacute;rer projet
+111,AddCampaigns,Ajouter Projets
+112,allcamp,toutes les projet
+113,draft,Projet
+114,active,Actif
+115,complete,Compl&eacute;ter
+116,camppics,Projet Pic
+117,fundinggoals,Objectif Principal
+118,featurecamp,Projets &dacute;entit&eacute;
+119,createdby,Cr&eacute;&eacute; par
+120,campaignorder,Projet Ordre
+121,dispcamp,Projet Display
+122,save,Sauvegarder
+123,campvidtitle,Projet Vid&eacute;o
+124,dashboard,Tableau de bord
+125,sharingtools,Partage D&oacute;utils
+126,description,Description
+127,rewards,R&eacute;compenses
+128,team,Equipe
+129,contributors,Contributeurs
+130,ideastab,Id&eacute;es
+131,hometab,Accueil
+132,gallerytab,Galerie
+133,updatestab,Mises &aacute; jours
+134,headertitle1,sherbrookois
+135,tasks,T&aacute;ches
+136,AddNewTask,Ajouter t&aacute;che
+137,allideas,toutes les id&eacute;es
+138,manageideas,Id&eacute;es G&eacute;rer
+139,manageideascat,G&eacute;rer Idea Cat&eacute;gories
+140,manageideastopics,G&eacute;rer Id&eacute;e Sujets
+141,manageideasstages,G&eacute;rer &eacute;tapes Idea
+142,manageideamoder,G&eacute;rer Mod&eacute;rateurs Idea
+143,manageinvitefriend,G&eacute;rer Invitez-un-ami
+144,managegoal,G&eacute;rer But
+145,managelib,G&eacute;rer la biblioth&eacute;que
+146,managememb,G&eacute;rer les membres
+147,managemoney,G&eacute;rer l&aacute;rgent
+148,managepartner,G&eacute;rer Partenaires
+149,managepoints,G&eacute;rer les points
+150,manageptspurch,G&eacute;rer Points achats
+151,manageprizes,G&eacute;rer prix
+152,manageprojectgrp,G&eacute;rer les groupes de projet
+153,managecategories,G&eacute;rer les cat&eacute;gories projets
+154,managepromocodes,G&eacute;rer des codes promo
+155,managequotes,G&eacute;rer Cours
+156,managerewards,G&eacute;rer Trucs
+157,managerewrequests,G&eacute;rer les demandes de Trucs
+158,manageRolPerm,G&eacute;rer R&oacute;les / Autorisations
+159,manageschools,G&eacute;rer &eacute;coles
+160,manageschoolstoadd,G&eacute;rer &eacute;coles-Ajouter
+161,managesections,G&eacute;rer les sections
+162,managesmstaglines,G&eacute;rer Accroches SMS
+163,managesubscr,G&eacute;rer les abonnements
+164,managesurveys,G&eacute;rer enqu&eacute;tes
+165,managetestimonial,G&eacute;rer T&eacute;moignages
+166,manageadminaudit,Audit Administration
+167,emailtool,email outil
+168,followedproj,Projets suivis
+169,searchkeyword,entrez mots cl&eacute; de recherche
+170,campaignVid,Projet Vid&eacute;o
+171,campaignPic,Projet Pic
+172,galleryimg,Galerie Images
+173,moderators,mod&eacute;rateurs
+174,dashvarval,Variables de tableau de bord avec des valeurs
+175,selmoderator,S&eacute;lectionner un mod&eacute;rateur
+176,labeltxt,&eacute;tiquette
+177,valtxt,valeur
+178,percentvaltxt,pourcentage Valeur
+179,uploadtext,Remarque: * S&iacute;l vous pla&iacute;t t&eacute;l&eacute;charger uniquement l&iacute;mage en taille 700x306
+180,upload2text,Remarque: * S&iacute;l vous pla&iacute;t t&eacute;l&eacute;charger uniquement l&iacute;mage en taille 200x200
+181,campvidnote1,Note: youtube ou vimeo URLs
+182,campvidnote2, 
+183,campvidnote3, 
+184,sharethisproj,Partager le projet
+185,unfollowtext,Ne pas suivre
+186,followtext,suivre
+187,embedtext,Int&eacute;grer
+188,emailtext1,Email
+189,descriptiontext,Description
+190,teamtext,&eacute;quipe
+191,relatedIdeas,Id&eacute;es connexes
+192,ideascheck1,points sont &aacute; utiliser ...
+193,pendingideastext,en attendant id&eacute;es
+194,activeideastext,id&eacute;es actifs
+195,needmyvotetext,besoin de mon vote
+196,retideastext,id&eacute;es retourn&eacute;s
+197,winnerideatext,id&eacute;es de gagnant
+198,totaltxt,total
+199,relatedtasktxt,T&aacute;ches connexes
+200,relatedprojtxt,Concernant le projets
+201,selectprojtxt,S&eacute;lectionnez Projet
+202,actions,actes
+203,pID,pID
+204,ptextContent,P
+205,resetS,r&eacute;initialiser
+206,currentBal,Votre solde de points est
+207,pts,pts
+208,toseehowearn,pour voir comment gagner des points
+209,addresource,Ajouter une ressource li&eacute;e
+210,addlevel2doc,AJOUTER UN NIVEAU 3 DOCUMENT
+211,type,type
+212,Title,titre
+213,Format,format
+214,Uploaded,T&eacute;l&eacute;charg&eacute
+215,filesize,Taille du fichier
+216,relatedRes,R E L A T E D   R E S O U R C E S
+217,futherInf,F U R T H E R   I N F O R M A T I O N
+218,forgotPassHeading,Vous avez oubli&eacute; votre mot de passe?
+219,forgotPassNote,"Entrez l&aacute;dresse e-mail et cliquez sur ""Envoyer"" pour avoir vos informations de connexion envoy&eacute;s."
+220,sendPassText,Envoyer Mot de passe
+221,emailfoundtext1,Nous avons d&eacute;j&aacute; un membre avec l&aacute;dresse e-mail que vous avez sp&eacute;cifi&eacute;.
+222,emailfoundtext2,Veuillez utiliser le Mot de passe oubli&eacute; la fonction pour r&eacute;cup&eacute;rer vos donn&eacute;es
+223,emailfoundtext3,"De connexion, ou le contact"
+224,emailfoundtext4,pour obtenir de l&aacute;ide
+225,validEmailNote,S&iacute;l vous pla&iacute;t entrer une adresse email valide.
+226,thanksText,MERCI!
+227,checkEmailNote,V&eacute;rifiez votre email: 
+228,forverilinktext,pour le lien de validation.
+229,firstNameText,Pr&eacute;nom
+230,lastNameText,Nom
+231,CountryText,pays
+232,PasswordText,mot de passe
+233,CpasswordText,confirmer mot de passe
+234,acceptterms,Acceptez les termes
+235,readterms1,J&Aacute;I LU ET ACCEPTER LA
+236,readterms2,CONDITIONS D&Uacute;TILISATION
+237,readterms3,JE SUIS D&Aacute;CCORD AVEC TOUTES LES DISPOSITIONS CONTENUES DANS IT.
+238,verifycomptext1,V&eacute;rification compl&eacute;te!
+239,verifycomptext2,Derni&eacute;re &eacute;tape!
+240,verifycomptext3,Entrez vos coordonn&eacute;es dans le formulaire ci-dessous. (Tous les champs sont obligatoires)
+241,acctinfotext,Informations du compte
+242,allfieldstext,Tous les champs obligatoires
+243,fullnametext,nom et pr&eacute;nom
+244,profileHeadText,Profil Headline
+245,pubprofileurltext,Profil public URL
+246,clickheretext,cliquez ici
+247,signuptext,signer
+248,notauthorizedtext,Vous n&eacute;tes pas autoris&eacute; &aacute; afficher cette page
+249,myPointsaccount,mon compte Points
+250,myCashaccount,mon compte de tr&eacute;sorerie
+251,myEducationaccount,mon compte &Eacute;ducation
+252,Moneymanagement,Gestion de l&aacute;rgent
+253,Howitworks,Comment ca marche
+254,Tirages,Tirages
+255,Awards,R&eacute;compenses
+256,pricelist,Liste de prix
+257,Thewinnerscircle,Le cercle des gagnants
+258,Suggestionsreward,Suggestions de r&eacute;compense
+259,articleTitle,Titre de l&aacute;rticle
+260,pubDate,date de publication
+261,Calendar,calendrier
+262,expiryDate,date d&eacute;xpiration
+263,Author,auteur
+264,allowtoview,Laisser Voir
+265,Administrators,administrateurs
+266,Public,public
+267,metatitle,meta Titre
+268,metadesc,meta Description
+269,metakey,meta Keywords
+270,commadeli,S&eacute;par&eacute;s par des virgules
+271,disporder,Ordre d&aacute;ffichage
+272,released,lib&eacute;r&eacute;
+273,addartnow,AJOUTER article maintenant
+274,updateartnow,MISE &Aacute; JOUR ARTICLE MAINTENANT
+275,editlevel3doc,Modifier le niveau 3 du document
+276,addlevel3doc,Ajouter Level 3 Document
+277,deletelinktext,Suppression d article supprime galement tous les sous-articles li. Etes-vous sr de vouloir supprimer cet article?
+278,Expired,expir&eacute;
+279,addlevel2doctxt,AJOUTER UN NIVEAU 2 DOCUMENT
+280,pluginmod,Module plugin
+281,nonetext,NONE
+282,newsreleasetext,Communiqu&eacute;s de presse
+283,eventscal,Calendrier des &eacute;v&eacute;nements
+284,relatedlinks,Liens connexes
+285,documentitle,Titre du document
+286,showonhomepage,Voir sur la page d&aacute;ccueil
+287,adddocno,Ajouter un document MAINTENANT
+288,editlevel32doc,Modifier le niveau 2 du document
+289,announcedbox,annonce Box
+290,updatedocnow,MISE &Aacute; JOUR DOCUMENT MAINTENANT
+291,alertdoclist1,Suppression dun document supprime galement tous les articles et sous-articles lis.
+292,alertdoclist2,Etes-vous sur de vouloir supprimer ce document?
+293,managesiteset,G&eacute;rer les param&eacute;tres du site
+294,sitesetupdatenote,Vos param&eacute;tres de site a &eacute;t&eacute; mis &aacute; jour
+295,sitecontwidth,Le contenu du site Largeur
+296,sitebttncolor,Bouton Couleur du site
+297,notetxt,Remarque
+298,notetxt2,"S&iacute;l vous pla&iacute;t entrer le num&eacute;ro comme 1000px, 2000px et 3000px etc dans la case ci-dessus de la largeur de contenu de site"
+299,notetxt3,S&iacute;l vous pla&iacute;t cliquer sur la case ci-dessus pour changer la couleur via le s&eacute;lecteur de couleurs
+300,notetxt4,S&iacute;l vous pla&iacute;t cliquer sur la case ci-dessus pour changer la couleur de fond via le s&eacute;lecteur de couleurs
+301,saveseti,enregistrer les param&eacute;tres
+302,notauthtext,Vous n&eacute;tes pas autoris&eacute; &aacute; afficher cette page
+303,followedprojheading,S&iacute;l vous pla&iacute;t se r&eacute;f&eacute;rer ci-dessous la liste des projets Suivi
+304,admindash,ADMINISTRATION DE BORD
+305,reportfrom,rapport De
+306,totext,&aacute;
+307,dispdash,AFFICHAGE DASH
+308,Registrations,inscriptions
+309,totalreg,Nombre d&iacute;nscriptions
+310,daterangereg,Date Range inscriptions
+311,Invitations,Invitations
+312,totalinvite,total des invitations
+313,totalsuccess,totale r&eacute;ussite
+314,overallsucrate,Taux global de r&eacute;ussite
+315,daterangeinvite,Date de Gamme Invitations
+316,daterangesucc,Date de gamme r&eacute;ussie
+317,daterangesucrate,Date de Gamme Taux de r&eacute;ussite
+318,Schools,&eacute;coles
+319,noofschools,Nombre d'&eacute;coles
+320,schoolsregmem,&Eacute;coles avec les membres inscrits
+321,staffregister,personnel enregistr&eacute;
+322,pointsearned,Points Gagn&eacute;s
+323,Charities,Les organismes de bienfaisance
+324,noofcharities,Nombre de bienfaisance
+325,Feedback,r&eacute;action
+326,feedback1,IDEAfunL Commentaires &Eacute;tant donn&eacute;
+327,Goals,objectifs
+328,avgpermem,Moy. par membre
+329,activegoals,Objectifs actifs
+330,overduegoals,Objectifs en souffrance
+331,completegoals,Objectifs remplis
+332,manageheadsite,G&eacute;rer t&eacute;te
+333,headerupnote,Le contenu de votre t&eacute;te est mise &aacute; jour
+334,footerupnote,Le contenu de votre pied de page est mise &aacute; jour
+335,managefootsite,G&eacute;rer la section Pied de page de site
+336,manageactrew,GESTION DES R&Eacute;COMPENSES DE L&Aacute;CTIVIT&Eacute;
+337,addanact,AJOUTER UNE ACTIVIT&Eacute;
+338,prizeentries,entr&eacute;es prix
+339,Education,&eacute;ducation
+340,addactivity,Ajouter une activit&eacute;
+341,Entries,entr&eacute;es
+342,addactnow,Ajouter une activit&eacute; MAINTENANT
+343,editactnow,Modifier l&aacute;ctivit&eacute;
+344,alertname,Vous devez entrer un nom pour cette activite
+345,alertdispord,Vous devez saisir un ordre daffichage pour cette activitee
+346,upactnow,ACTIVIT&Eacute; Mettre &aacute; jour maintenant
+347,manageadminN,g&eacute;rer les administrateurs
+348,addanadminN,AJOUTER UNE ADMNISTRATOR
+349,deladminalert,Etes-vous sur de vouloir supprimer cette Administrateur
+350,addanadminTxt,Ajouter un administrateur
+351,firstnamealert,Vous devez entrer un prenom
+352,lastnamealert,Vous devez entrer un nom
+353,emailalert,Vous devez entrer une adresse e-mail
+354,passalert,Vous devez entrer un mot de passe
+355,addnow,AJOUTER ENTREPRISE
+356,editthisadmin,Editer ce Administrateur
+357,updatenow,Mettre &aacute; jour maintenant
+358,alertBizideas,Etes-vous sur de vouloir supprimer cette BizIdea
+359,managebusi,g&eacute;rer des entreprises
+360,addabusi,Ajouter un commerce
+361,manageprivbusi,GESTION entreprises priv&eacute;es
+362,Business,entreprise
+363,typet,type
+364,Display,Afficher
+365,Active,actif
+366,Jobs,Offres d&eacute;mploi
+367,addbusi,Ajouter affaires
+368,alertbusi,Vous devez entrer le Titre Professionnel
+369,busitypealert,Vous devez selectionner un type dentreprise
+370,alertbriefsumm,Sil vous plait entrer un bref resume
+371,selectTypeT,S&iacute;l vous pla&iacute;t s&eacute;lectionner un type
+372,minage,l&aacute;ge minimum
+373,enterminage,Sil vous pla&iacute;t entrer &aacute;ge minimum de l&uacute;tilisateur en premier
+374,Summary,r&eacute;sum&eacute;
+375,thumbimg,Vignette
+376,resizethumb,Redimensionne &aacute; 80px (w) x 60px (h) lors de la cr&eacute;ation de la miniature
+377,badresnote,Pour &eacute;viter de mauvais r&eacute;sultats sil vous pla&iacute;t originaux de taille pour correspondre &aacute; l&eacute;chelle
+378,sizenote,c&eacute;st-&aacute;-200px (w) x 150px (h) ... 400px (w) x 300px (h)
+379,addbusinow,Ajouter une entreprise ENTREPRISE
+380,editbusi,Modifier affaires
+381,Idea,id&eacute;e
+382,bizideaalert,"Sil vous pla&iacute;t, entrez votre id&eacute;e Biz"
+383,currImage,IMAGE ACTUELLE
+384,updatebusinow,UPDATE entreprise maintenant
+385,addacharity,Ajoutez Charite
+386,City,ville
+387,State,&eacute;tat
+388,Notes,Remarques
+389,for,pour
+390,View,Voir
+391,ALL,TOUT
+392,charitieswithmem,ORGANISMES DE BIENFAISANCE AVEC LES MEMBRES
+393,primarycontact,contact principal
+394,Members,membres
+395,charitieswithoutmem,ORGANISMES DE BIENFAISANCE SANS MEMBRES
+396,charitydelalert,Etes-vous sur de vouloir supprimer cette charite
+397,charitynamelaert,Vous devez entrer un nom pour cette charite
+398,pricontfnamelaert,Vous devez entrer le pr&eacute;nom pour le Contact principal
+399,pricontlnamelaert,Vous devez entrer le nom du contact principal
+400,validemailalert,Sil vous plait entrer une adresse email valide
+401,pricontactpassalert,Vous devez entrer un mot de passe pour la ressource principale
+402,charitydetails,DETAILS DE BIENFAISANCE
+403,charityname,charit&eacute; Nom
+404,Phone,t&eacute;l&eacute;phone
+405,weburl,site Web
+406,address1,adresse 1
+407,address2,adresse 2
+408,citytown,Ville / Localit&eacute;
+409,Region,r&eacute;gion
+410,selregion,Choisissez une r&eacute;gion
+411,streg,Etat / R&eacute;gion
+412,addcharitynow,AJOUTER CHARIT&Eacute; ENTREPRISE
+413,managecharity,G&eacute;rer la Charit&eacute;
+414,viewprofile,VOIR PROFIL
+415,updateprofile,UPDATE PROFILE
+416,stafflist,LISTE DU PERSONNEL
+417,memberlist,Liste des membres
+418,myprojects,Mes projets
+419,Medium,moyen
+420,addTaskTitle,Ajouter une t&aacute;che
+421,addTaskBtnTitle,enregistrer la t&aacute;che
+422,taskPriority,Priorit&eacute; des t&aacute;ches
+423,dispTask,afficher Groupe
+424,editTaskHeading,Modifier la t&aacute;che
+425,updateTaskNow,Mettre &aacute; jour des t&aacute;ches
+426,percentdone,% fait
+427,uploadwithvideotext,Remarque: * Sil vous pla&iacute;t t&eacute;l&eacute;charger uniquement l&iacute;mage en taille 200x200 et vid&eacute;o MP4 et FLV seulement..
+428,projmedtitle,Media Projet
+429,resetSel,Effacer la s&eacute;lection
+430,resetSelNote,Note: * Cliquez ici si vous souhaitez r&eacute;initialiser votre derni&eacute;re s&eacute;lection de cat&eacute;gories.
+431,mainCatTitle,Cat&eacute;gorie principale
+432,titleerror,Vous devez entrer un titre pour ce projet.
+433,moderatorreq,Requis: Vous devez s&eacute;lectionner le mod&eacute;rateur
+434,selCatProjTitle,Vous devez s&eacute;lectionner une cat&eacute;gorie pour ce projet.
+435,errorT,Erreur
+436,selThreeCate,Vous devez s&eacute;lectionner au moins trois cat&eacute;gories pour ce projet.
+437,selatleastone,S&iacute;l vous pla&iacute;t s&eacute;lectionner au moins une cat&eacute;gorie dans la cat&eacute;gorie principale.
+438,projectTitle,Vous devez entrer un titre pour ce projet.
+439,videoURLerror,Requis: Vous devez avoir &aacute; entrer le URL de la vid&eacute;o ou s&eacute;lectionnez l&iacute;mage pour le projet
+440,videoURL2,Requis: Vous devez avoir &aacute; entrer l&Uacute;RL de vid&eacute;o pour le projet
+441,projImgError,Requis: Vous devez avoir &aacute; s&eacute;lectionner l&iacute;mage du projet
+442,moderatorError,Requis: Vous devez s&eacute;lectionner le mod&eacute;rateur
+443,selacateerror,"Actuellement, il n&eacute;st pas des cat&eacute;gories s&eacute;lectionn&eacute;es."
+444,searchkeywordtext,"S&iacute;l vous pla&iacute;t, entrez votre mot cl&eacute; de recherche:"
+445,allCatTitle,toutes les cat&eacute;gories
+446,sagesAReward,&Eacute;tapes et r&eacute;compenses
+447,editTitleHeading,Modifier
+448,SponsorText,Sponsor
+449,ptsavail,Points disponibles
+450,Finishes,finitions
+451,anystage,AUCUN STADE
+452,keywords,Mots cl&eacute;s ...
+453,addnewidea,Ajouter id&eacute;e
+454,processvotes,Votes de processus
+455,Displaying,visualisation
+456,ideas,id&eacute;es
+457,View,Voir
+458,ALL,TOUT
+459,ideatitleNote1,Cliquez sur le titre de l&iacute;d&eacute;e pour plus de d&eacute;tails et de voter et entrer de commentaires ...
+460,ideatitleNote2,Cliquez sur le titre de l&iacute;d&eacute;e pour plus de d&eacute;tails. Connectez-vous pour voter et donner votre avis ...
+461,allideas,toutes les id&eacute;es
+462,OPEN,OUVERT
+463,CLOSE,FERMER
+464,ideasvoted,Id&eacute;es J&aacute;i vot&eacute; sur
+465,showtext,VOIR
+466,hidetext,CACHER
+467,Votes,Votes
+468,yourvote,votre vote
+469,ideatitleNote3,Cliquez titre de l&iacute;d&eacute;e pour plus de d&eacute;tails et de voter et entrer de commentaires ...
+470,ideatitleNote4,Cliquez titre de l&iacute;d&eacute;e pour plus de d&eacute;tails. Connectez-vous pour voter et donner votre avis ...
+471,ideatitleNote5,Pas d&iacute;d&eacute;es ont &eacute;t&eacute; trouv&eacute;s pour l&uacute;tilisation des crit&eacute;res de recherche sp&eacute;cifi&eacute;s ci-dessus.
+472,viewideas,VOIR LES ID&Eacute;ES
+473,addadraftidea,AJOUTER UN ÉBAUCHE IDÉE
+474,alltopics,TOUTES LES SUJETS
+475,Pending,en attendant
+476,stage1,étape 1
+477,stage2,étape 2
+478,stage3,étape 3
+479,winnerideadoing,Vainqueur Idea - Faire
+480,winnerideadone,Vainqueur Idea - Fait
+481,returnedvotedno,Renvoy&eacute;s (vot&eacute; non)
+482,ideacodekeywords,Code id&eacute;e ou mots-cl&eacute;s
+483,noideasfound,Pas d&iacute;d&eacute;es ont &eacute;t&eacute; trouv&eacute;s correspondant &aacute; vos recherche.
+484,ideaaddalert1a,Le sujet que vous tentez dajouter votre idee a eete ferme
+485,ideaaddalert1b,Vous ne pouvez ajouter idees pour ouvrir sujets
+486,ideaaddalert2,Sil vous plait entrer un vote pour chaque idee
+487,ideaaddalert3,Sil vous plait entrer vos commentaires pour aider a developper cette idee
+488,ideaaddalert4,Sil vous plait entrer un vote pour chaque idee
+489,ideaaddalert5,Sil vous plaît entrer vos commentaires pour aider a developper cette idee
+490,ideawinheading1,Il existe deux types de gagner Id&eacute;es ici. Le premier type a pass&eacute; avec succ&eacute;s tous les trois tours de scrutin
+491,ideawinheading2,et nous cherchons maintenant &aacute; la facon dont nous devrions aller sur le fait. Le deuxi&eacute;me type d&iacute;d&eacute;es sont celles qui sont
+492,ideawinheading3,"bon et vraiment simple &aacute; faire. Nous faisons les d&eacute;s que nous les voyons, de sorte que sa ""DONE"""
+493,allwinningideas,TOUS id&eacute;es gagnantes
+494,Doing,faire
+495,Done,Termin&eacute;
+496,addanidea,Ajouter id&eacute;e
+497,addideatext1,Comment ajouter une id&eacute;e ...
+498,addideatext2,Voter pour autoriser de nouvelles id&eacute;es par d&aacute;utres.
+499,addideatext3,Entrez votre id&eacute;e pour les autres &aacute; voir et &aacute; voter sur
+500,addideatext4,Si 2 sur 3 vote OUI pour votre id&eacute;e - il devient visible
+501,addideatext5,"Pour chaque id&eacute;e ou suggestion que vous soumettez qui est approuv&eacute; et affich&eacute; sur le site, vous obtenez une entr&eacute;e dans le tirage au sort pour gagner des prix."
+502,addideatext6,Et chaque fois que vos id&eacute;es se d&eacute;place jusqu&aacute; un stade - vous gagnez plus de points.
+503,addideatext7,toutes les suggestions que vous voter et donner une r&eacute;troaction sur vous emm&eacute;ne aussi une entr&eacute;e dans le tirage au sort.
+504,votenewideas,Vote sur ces nouvelles id&eacute;es
+505,nopendingtxt,Il a pas de idées en attente
+506,nopendingtxt2,ajoutez vos id&eacute;es
+507,enteridea1,Entrez votre id&eacute;e
+508,pleasenote,SVP NOTER
+509,pleasenote2,"Une fois que vous avez soumis votre id&eacute;e, vous ne serez plus en mesure de modifier le ""r&eacute;sum&eacute;"""
+510,ideacate,id&eacute;e Cat&eacute;gorie
+511,ideatopic,idée sujet
+512,pickupanideacate,Choisissez une idée catégorie
+513,summmax,sommaire (120 max)
+514,castvoteidea,Jetez vos votes et ajoutez votre idée
+515,thankstext1,Merci pour voter et donner de la retroaction. Votre idee a ete ajoutee a la IDEAfunL.
+516,Suggested,suggéré
+517,Stage,étape
+518,addyourfeedback,ajouter votre avis pour améliorer cette idée…
+519,addideawatch,vous avez ajoute lidee de votre liste
+520,remideawatch,vous avez supprime l'idée de votre liste
+521,noideamsg,pas encore des idées gagnantes
+522,activeideas,idées actifs
+523,needmyvote,besoin de mon vote
+524,retideas,idées retournés
+525,winnerideas,idées de gagnant
+526,pendingideas,en attendant idées
+527,Total,total
+528,ideastxt,idées

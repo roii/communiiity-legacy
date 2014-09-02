@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--- 
+	Application: CF_Activedit
+	Name: hyperlink.cfm
+	Function: Hyperlink tool window
+	Author: Matt Finn
+	Company: CFDEV.COM
+	Version: 4
+	Revisions:
+	Date: 4/13/00
+ --->
+
+<html>
+<head>
+	<title>Hyperlink</title>
+</head>
+<style type="text/css">
+	
+	TD.Styled   {font-family:Tahoma,verdana,arial; font-size:8pt; background:white;}
+
+	A {
+		color : 1d039e;
+		text-decoration : none;
+		font-family:Verdana,arial; font-size:10pt;
+	}
+	A:Hover {
+		text-decoration : underline;
+		font-family:Verdana,arial; font-size:10pt;
+	}
+
+</style>
+<script language="JavaScript">
+	var linkType;
+	var DHTMLSafe;
+	
+	function initialize() {
+		DHTMLSafe = window.opener.DHTMLSafe;
+		var trSel=DHTMLSafe.DOM.selection.createRange();
+		var coll=DHTMLSafe.DOM.all.tags("A");
+		var fBreak=false;
+
+		for(i=0;i<coll.length&&!fBreak;i++) {
+			trLink=DHTMLSafe.DOM.body.createTextRange();
+			trLink.moveToElementText(coll[i]);
+
+			if((trSel.compareEndPoints("EndToStart",trLink)==1)&&
+				(trSel.compareEndPoints("StartToEnd",trLink)==-1))
+			{
+				if(trSel.compareEndPoints("StartToStart",trLink)==1)
+					trSel.setEndPoint("StartToStart",trLink);
+				if(trSel.compareEndPoints("EndToEnd",trLink)==-1)
+					trSel.setEndPoint("EndToEnd",trLink);
+				
+				trSel.select();
+				document.all.linkform.oHref.value=coll[i].href;
+				document.all.linkform.oTarget.value=coll[i].target;
+				document.all.linkform.oStyle.value=coll[i].style.cssText;
+				document.all.linkform.oClass.value=coll[i].className;
+				
+				document.all.oTitle.innerText="Update Hyperlink";
+				document.all.oInsert.innerText="Update Link";
+
+				linkType="update";			
+				fBreak=true;
+			}
+		}
+		if(!fBreak) {
+			if(trSel.compareEndPoints("StartToEnd",trSel)==0) { // New Link
+				linkType="new";
+				document.all.linkform.oHref.select();
+			}
+			else
+				linkType="link";			
+		}
+
+	}
+	
+
+	function linkit() {
+
+		window.opener.ae_hyperlink(window.opener.ae_hot,
+			document.all.linkform.oHref.value,
+			document.all.linkform.oTarget.value,
+			document.all.linkform.oStyle.value,
+			document.all.linkform.oClass.value,
+			document.all.linkform.oName.value
+			);
+
+		window.close();
+	}
+	
+</script>
+<body onload="initialize()" topmargin="0" leftmargin="0" rightmargin="0">
+<center><div style="font:bold 10pt Verdana,Arial;background-color:#f5f5f5;padding:4px;margin-bottom:5px;border-bottom:1px solid silver;" id="oTitle">Insert Hyperlink</div>
+<table cellpadding="1" cellspacing="2" border="0">
+<tr><form name="linkform">
+	<td class="styled">
+		<span style="font-size:10pt">HREF:</span>
+	</td>
+	<td colspan="3">
+		<input type="text" name="oHref" size="35" value="http://">
+	</td>
+</tr>
+<tr>
+	<td class="styled">
+		<span style="font-size:10pt">Target:</span>
+	</td>
+	<td colspan="3">
+		<input type="text" name="oTarget" size="35" value="">
+	</td>
+</tr>
+<tr>
+	<td class="styled">
+		<span style="font-size:10pt">Style:</span>
+	</td>
+	<td colspan="3">
+		<input type="text" name="oStyle" size="35" value="">
+	</td>
+</tr>
+<tr>
+	<td class="styled">
+		<span style="font-size:10pt">Class:</span>
+	</td>
+	<td>
+		<input type="text" name="oClass" size="8" value="">
+	</td>
+	<td class="styled">
+		<span style="font-size:10pt">Name:</span>
+	</td>
+	<td>
+		<input type="text" name="oName" size="15" value="">
+	</td>
+</tr></form>
+</table>
+<br>		
+<div style="background-Color:#f5f5f5;padding:4px;border-top:1px solid silver;">
+			<a href="javascript:linkit()"><img src="images/down.gif" border="0" alt="Insert Hyperlink" align="absmiddle"></a>&nbsp;<A href="javascript:linkit()"><b><span id="oInsert">Insert Link</span></b></a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="javascript:window.close()"><img src="images/delete.gif" alt="Close this window" border="0" align="absmiddle"></a>&nbsp;<A href="javascript:window.close()"><b>Cancel</b></a>
+</div>			
+		</center>
+</body>
+</html>
