@@ -1,0 +1,5 @@
+<project name="communiiity" default="version" basedir=".">
+    <property file="build.properties" />
+    <target name="version">
+    </target>
+</project>

@@ -1,0 +1,16 @@
+<project name="communiiity" default="version" basedir=".">
+    <property file="build.properties" />
+    
+    <target name="version" if="version.file">
+        <propertyfile file="version.properties">
+            <entry key="build" type="int" operation="+" default="0" />
+        </propertyfile>
+    
+        <copy overwrite="true" file="${version.stub}" toFile="${version.file}" />
+    
+        <replace file="${version.file}" propertyFile="version.properties">
+            <replacefilter token="@version@" property="version" />
+            <replacefilter token="@build@" property="build" />
+        </replace>
+    </target>
+</project>

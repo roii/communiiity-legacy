@@ -89,3 +89,5 @@ WHERE ParserURL LIKE '%#cgi.http_host#%'
 
 <cfset BadUserAgents = "gigablast,gogglebot">
     
+    
+    
