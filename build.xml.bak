@@ -1,8 +1,26 @@
 <project name="communiiity" default="package" basedir=".">
     <property file="build.properties" />
     
-    <target name="package" depends="version, zipPackageDevsite">
+    <target name="package" depends="version, zipPackage">
         <echo>Building the full codebase</echo>
+    </target>
+
+    <target name="packageDevsite" depends="version, zipPackageDevsite">
+        <property name="server.URL" value="" />
+        <echo>Building the devsite codebase</echo>
+        
+        <!-- transfer the file to the dev box -->
+        <antcall target="transferToServer">
+            <param name="serverURL" value="${server.URL}" />
+        </antcall>
+        
+        <!-- unzip the file at the dev box -->
+        <antcall target="inflateDirectory">
+            <sshexec host="${server.URL}" 
+                     username="${server.username}" 
+                     password="${server.password}" 
+                     command="~/deploySite.sh" />
+        </antcall>
     </target>
 
     <target name="version" if="version.file">
@@ -28,6 +46,14 @@
     
     <target name="zipPackageDevsite" depends="cleanupPackaging">
         <zip destfile="${package.dir}/${package.name}" basedir="${basedir}/devsite/" />
+    </target>
+
+    <target name="transferToServer">
+        <scp file="${package.dir}/${package.name}" todir="${server.username}:${server.password}@${serverURL}:~/" />
+    </target>
+
+    <target name="cleanupPackaging">
+        <delete dir="${package.dir}/" />
     </target>
 
 </project>
