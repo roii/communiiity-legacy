@@ -1,0 +1,2 @@
+version.file=${basedir}/version.cfm
+version.stub=${basedir}/version_stub.cfm
