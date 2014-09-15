@@ -2,6 +2,5 @@ version.file=${basedir}/version.cfm
 version.stub=${basedir}/version_stub.cfm
 package.dir=${basedir}/build-temp
 package.name=communiiity_build.zip
-server.URL=
 server.username=jenkins
 server.password=hC123!!!
