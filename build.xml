@@ -49,6 +49,7 @@
     </target>
 
     <target name="transferToServer">
+        <echo>Transferring file to ${serverURL}</echo>
         <scp file="${package.dir}/${package.name}" todir="${server.username}:${server.password}@${serverURL}:~/" />
     </target>
 
