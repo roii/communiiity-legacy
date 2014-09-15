@@ -52,8 +52,4 @@
         <scp file="${package.dir}/${package.name}" todir="${server.username}:${server.password}@${serverURL}:~/" />
     </target>
 
-    <target name="cleanupPackaging">
-        <delete dir="${package.dir}/" />
-    </target>
-
 </project>

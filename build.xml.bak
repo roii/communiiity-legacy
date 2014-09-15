@@ -6,7 +6,7 @@
     </target>
 
     <target name="packageDevsite" depends="version, zipPackageDevsite">
-        <property name="server.URL" value="" />
+        <property name="server.URL" value="54.68.40.221" />
         <echo>Building the devsite codebase</echo>
         
         <!-- transfer the file to the dev box -->
