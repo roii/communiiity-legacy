@@ -14,10 +14,10 @@
         </replace>
     </target>
 
-    <target name="package" if="version.file" depends="target", "cleanupPackaging", "zipPackageDevsite">
+    <target name="package" if="version.file" depends="target,cleanupPackaging,zipPackageDevsite">
         <!-- will all of the steps here work? -->
 
-
+        <echo message="building the package" />
 
     </target>
 
@@ -32,9 +32,5 @@
     <target name="zipPackageDevsite" depends="delDirFromPackage">
         <zip destfile="${package.dir}/${package.name}" basedir="${basedir}/devsite/" />
     </target>
-    
-
-
-
 
 </project>

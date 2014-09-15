@@ -14,11 +14,8 @@
         </replace>
     </target>
 
-    <target name="package" if="version.file" depends="target,cleanupPackaging,zipPackageDevsite">
-        <!-- will all of the steps here work? -->
-
+    <target name="package" depends="target,cleanupPackaging,zipPackageDevsite">
         <echo message="building the package" />
-
     </target>
 
     <target name="cleanupPackaging">
