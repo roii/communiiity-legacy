@@ -13,4 +13,28 @@
             <replacefilter token="@build@" property="build" />
         </replace>
     </target>
+
+    <target name="package" if="version.file" depends="target", "cleanupPackaging", "zipPackageDevsite">
+        <!-- will all of the steps here work? -->
+
+
+
+    </target>
+
+    <target name="cleanupPackaging">
+        <delete dir="${package.dir}$/" />
+    </target>
+    
+    <target name="zipPackage" depends="delDirFromPackage">
+        <zip destfile="${package.dir}/${package.name}" basedir="${basedir}" />
+    </target>
+    
+    <target name="zipPackageDevsite" depends="delDirFromPackage">
+        <zip destfile="${package.dir}/${package.name}" basedir="${basedir}/devsite/" />
+    </target>
+    
+
+
+
+
 </project>
